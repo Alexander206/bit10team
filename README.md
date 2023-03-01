@@ -4,7 +4,7 @@ _SabrosApp_
 
 Todo en un mismo lugar! En esta aplicación encontrarás cientos de recetas que puedes preparar con los ingredientes que tienes en casa, olvídate de pensar por horas que preparar, explora sabores y crea maravillas con la creatividad de los miembros de la comunidad que suben sus mejores recetas. Únete a SabrosApp.
 
-Participantes
+*Participantes*
 
 1. Adriana Moreno
 2. Eleiza Caridad
@@ -73,4 +73,38 @@ Ejecuta este comando para iniciar el proyecto:
 
     npm run dev
 
+<hr/>
+
+## Guía de estilos de Tecno Power
+
+Colores
+![image](./src/assets/colorTeam.png)
+
+Tipografía:
+
+SanSerif : futura medium bt
+SanSerif : Morganite
+
+## Guía de estilos de Tecno Power
+
+Colores
+![image](./src/assets/colorSabrosApp.png)
+
+Logo 
+![image](./src/assets/logoTecnoPower.png)
+
+Tipografía:
+
+SanSerif : futura medium bt
+SanSerif : Morganite
+
 <br/>
+
+## Ramas de GitHub
+
+- El proyecto se compone de la rama Main, desarrollo y colaboradores.
+
+## Asesoría
+
+Docente : Javier Andres 
+Desarrollo Front End React
