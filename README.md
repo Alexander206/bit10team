@@ -111,6 +111,17 @@ SanSerif : futura medium bt
 <br/>
 SanSerif : Morganite
 
+## Wireframe de Baja SabrosApp
+
+![image](./src/assets/wireframe%20de%20baja%201.jpg)
+<br/>
+
+![image](./src/assets/wireframe%20de%20baja%202.jpg)
+<br/>
+
+![image](./src/assets/wireframe%20de%20baja%203.jpg)
+
+<hr/>
 
 ## Wireframe Alta SabrosApp
 
