@@ -40,3 +40,37 @@ Wendy Carlos
 | - Viernes | 3:00pm a 4:00pm |
 
 <hr/>
+## API
+
+Link: `https://www.themealdb.com/`
+
+<br/>
+
+## Tecnologías utilizadas
+
+- React
+- Vite
+- Bootstrap
+- Sass
+
+<br/>
+
+## Requerimientos
+
+- Node.js (v18.9.0 o superior)
+- NPM (8.19.1 o superior)
+
+## Instalación
+
+Clona el repositorio en tu máquina local.
+Abre una terminal y navega hacia el directorio del proyecto.
+
+Ejecuta el siguiente comando para instalar las dependencias:
+
+    npm install
+
+Ejecuta este comando para iniciar el proyecto:
+
+    npm run dev
+
+<br/>
