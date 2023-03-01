@@ -1,4 +1,4 @@
-_SabrosApp_
+<h1 style="color:#DA4367">SABROSAPP</h1>
 
 ## Descripción:
 
@@ -40,9 +40,14 @@ Wendy Carlos
 | - Viernes | 3:00pm a 4:00pm |
 
 <hr/>
+
 ## API
 
-Link: `https://www.themealdb.com/`
+<a href="https://www.themealdb.com/" target="_blank" rel="noopener noreferrer">Vínculo</a>
+
+## Trello
+
+<a href="https://trello.com/invite/b/fMVJOlsv/ATTI9f9dde31053aec7691f80ab5cdc8b9d54050BBCB/tecno-power" target="_blank" rel="noopener noreferrer">Vínculo</a>
 
 <br/>
 
@@ -77,28 +82,30 @@ Ejecuta este comando para iniciar el proyecto:
 
 ## Guía de estilos de Tecno Power
 
+Logo 
+![image](./src/assets/logoTecnoPower.png)
+
 Colores
 ![image](./src/assets/colorTeam.png)
 
 Tipografía:
 
 SanSerif : futura medium bt
+<br/>
 SanSerif : Morganite
 
-## Guía de estilos de Tecno Power
+## Guía de estilos SabrosApp
 
 Colores
 ![image](./src/assets/colorSabrosApp.png)
 
-Logo 
-![image](./src/assets/logoTecnoPower.png)
-
 Tipografía:
 
 SanSerif : futura medium bt
+<br/>
 SanSerif : Morganite
 
-<br/>
+<hr/>
 
 ## Ramas de GitHub
 
@@ -107,4 +114,5 @@ SanSerif : Morganite
 ## Asesoría
 
 Docente : Javier Andres 
+<br/>
 Desarrollo Front End React
