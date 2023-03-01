@@ -12,3 +12,31 @@ Participantes
 4. Wendy Carlos
 
 <hr/>
+
+### Responsable Repositorio y Despliegue
+
+Jeisson Gavilán
+
+### Responsable de Documentación
+
+Adriana Moreno
+
+### Responsable de Wireframe de baja
+
+Eleiza Caridad
+
+### Responsable de Wireframe de alta
+
+Wendy Carlos
+
+<hr/>
+
+## Horarios
+
+| Día       | Hora            |
+| --------- | --------------- |
+| - Martes  | 3:00pm a 4:00pm |
+| - Jueves  | 3:00pm a 4:00pm |
+| - Viernes | 3:00pm a 4:00pm |
+
+<hr/>
