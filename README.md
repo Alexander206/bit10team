@@ -94,6 +94,12 @@ SanSerif : futura medium bt
 <br/>
 SanSerif : Morganite
 
+## Wireframe Alta Tecno Power
+
+![image](./src/assets/tecno-power-03.png)
+
+<hr/>
+
 ## Guía de estilos SabrosApp
 
 Colores
@@ -105,7 +111,16 @@ SanSerif : futura medium bt
 <br/>
 SanSerif : Morganite
 
+
+## Wireframe Alta SabrosApp
+
+![image](./src/assets/tecno-power-01.png)
+<br/>
+
+![image](./src/assets/tecno-power-02.png)
+
 <hr/>
+
 
 ## Ramas de GitHub
 
