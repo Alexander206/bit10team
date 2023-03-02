@@ -83,10 +83,10 @@ Ejecuta este comando para iniciar el proyecto:
 ## Guía de estilos de Tecno Power
 
 Logo 
-![image](./src/assets/logoTecnoPower.png)
+![image](./src/assets/document/logoTecnoPower.png)
 
 Colores
-![image](./src/assets/colorTeam.png)
+![image](./src/assets/document/colorTeam.png)
 
 Tipografía:
 
@@ -96,14 +96,14 @@ SanSerif : Morganite
 
 ## Wireframe Alta Tecno Power
 
-![image](./src/assets/tecno-power-03.png)
+![image](./src/assets/document/tecno-power-03.png)
 
 <hr/>
 
 ## Guía de estilos SabrosApp
 
 Colores
-![image](./src/assets/colorSabrosApp.png)
+![image](./src/assets/document/colorSabrosApp.png)
 
 Tipografía:
 
@@ -111,13 +111,24 @@ SanSerif : futura medium bt
 <br/>
 SanSerif : Morganite
 
+## Wireframe de Baja SabrosApp
+
+![image](./src/assets/document/wireframe%20de%20baja%201.jpg)
+<br/>
+
+![image](./src/assets/document/wireframe%20de%20baja%202.jpg)
+<br/>
+
+![image](./src/assets/document/wireframe%20de%20baja%203.jpg)
+
+<hr/>
 
 ## Wireframe Alta SabrosApp
 
-![image](./src/assets/tecno-power-01.png)
+![image](./src/assets/document/tecno-power-01.png)
 <br/>
 
-![image](./src/assets/tecno-power-02.png)
+![image](./src/assets/document/tecno-power-02.png)
 
 <hr/>
 
