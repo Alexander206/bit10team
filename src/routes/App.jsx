@@ -1,9 +1,5 @@
 function App() {
-  return (
-    <div className='App'>
-      <h1>Tecno Power</h1>
-    </div>
-  );
+  return <div className='App'>En construción</div>;
 }
 
 export default App;
