@@ -4,8 +4,8 @@ import { Header } from '../components/Header.jsx';
 export const Inicio = () => {
   return (
     <>
-      <Header></Header>
-
+     <Header></Header>
+     
       <main>
         <section>
           <figure>
