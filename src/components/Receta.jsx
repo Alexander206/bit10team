@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import '../styles/components/receta.scss'
+import "../styles/components/receta.scss";
 
-export const Receta = ({ img, name, description, category }) => {
+export const Receta = ({ img, name, description, ingredient }) => {
   return (
-    <article className='receta'>
+    <article className="receta">
       <figure>
-        <img src={img} alt='' />
+        <img src={img} alt="" />
       </figure>
 
       <article>
@@ -14,7 +14,9 @@ export const Receta = ({ img, name, description, category }) => {
         <p>{description}</p>
 
         <ul>
-          <li>{category}</li>
+          <li>{ingredient[0]}</li>
+          <li>{ingredient[1]}</li>
+          <li>{ingredient[2]}</li>
         </ul>
       </article>
     </article>
