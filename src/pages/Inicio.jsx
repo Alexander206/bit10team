@@ -1,11 +1,41 @@
-import React, { Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
+import { Header } from '../components/Header.jsx';
+import { Receta } from '../components/Receta.jsx';
+import imgCheft from '../assets/document/chef.png';
+import '../styles/pages/inicio.scss';
 
-const Inicio = () => {
+export const Inicio = () => {
+  const API = 'https://fakestoreapi.com/products';
+  const [recetas, setrecetas] = useState([]);
+  const [datos, setdatos] = useState(<h1>No hay data</h1>);
+
+  window.addEventListener('load', async () => {
+    let res = await fetch(API);
+    let response = await res.json();
+
+    setrecetas(response);
+  });
+
+  useEffect(() => {
+    let data = recetas.map((item) => {
+      return (
+        <Receta
+          key={item.id}
+          img={item.image}
+          name={item.title}
+          description={item.description}
+          category={item.category}
+        />
+      );
+    });
+
+    setdatos(data);
+  }, [recetas]);
+
   return (
-    <Fragment>
-      <header>Wendy</header>
-
-      <main>
+    <>
+      <Header />
+      <main className='main_inicio'>
         <section className='fondo_banner'>
           <figure>
             <h1>SABROSAP</h1>
@@ -15,11 +45,11 @@ const Inicio = () => {
           <article>
             <figure>
               <figcaption></figcaption>
-              <img src='./' alt='' />
+              <img src={imgCheft} alt='' />
             </figure>
           </article>
 
-          <article>
+          <article className=''>
             <ul>
               <li>
                 <button> Alimento</button>
@@ -36,35 +66,12 @@ const Inicio = () => {
           </article>
         </section>
 
-        <section className='recetas'>
-          <article>
-            <figure>
-              <img src='' />
-            </figure>
-
-            <article>
-              <h3>Food Name</h3>
-              <p>
-                El aceite de oliva es un aceite vegetal saludable y nutritivo que se extrae de las aceitunas. Es rico en
-                grasas monoinsaturadas y polifenoles, lo que lo convierte en un ingrediente versátil en la cocina y
-                beneficioso para la salud. Su sabor y aroma característicos lo hacen ideal para ensaladas, aderezos,
-                guisos y otras preparaciones culinarias.
-              </p>
-
-              <ul>
-                <li>ingrediente</li>
-                <li>ingrediente</li>
-                <li>ingrediente</li>
-              </ul>
-            </article>
-          </article>
+        <section className='recetas' id='recetas'>
+          {datos}
         </section>
-        <a h />
       </main>
 
       <footer>Adriana</footer>
-    </Fragment>
+    </>
   );
 };
-
-export default Inicio;

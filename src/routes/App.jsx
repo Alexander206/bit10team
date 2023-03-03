@@ -1,5 +1,8 @@
+import React from 'react';
+import { Inicio } from '../pages/Inicio.jsx';
+
 function App() {
-  return <div className='App'>En construción</div>;
+  return <Inicio />;
 }
 
 export default App;
