@@ -1,6 +1,6 @@
 import React from 'react';
 import { Inicio } from '../pages/Inicio.jsx';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { SobreNosotros } from '../pages/SobreNosotros.jsx';
 import { Registrate } from '../pages/Registrate.jsx';
 import { NotFound } from '../pages/NotFound.jsx';
