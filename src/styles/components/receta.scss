@@ -1,0 +1,66 @@
+.receta {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--oscuro);
+
+  width: 100%;
+  max-width: 60rem;
+  padding: 2rem;
+  margin: 1rem;
+
+  figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 12rem;
+    height: 12em;
+    border-radius: 2rem;
+    background-color: white;
+    overflow: hidden;
+
+    margin-right: 1rem;
+
+    img {
+      height: 80%;
+    }
+  }
+
+  article {
+
+    width: 70%;
+
+    h3 {
+      font-weight: bolder;
+      font-size: 1.8rem;
+      color: var(--claro);
+
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: var(--claro);
+    }
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      width: 100%;
+      list-style: none;
+
+      li {
+        color: var(--claro);
+        font-size: 1.4rem;
+        font-weight: bold;
+        background-color: var(--verde);
+        border-radius: 2rem;
+        padding: 1rem;
+        margin: 1rem;
+      }
+    }
+  }
+
+
+}

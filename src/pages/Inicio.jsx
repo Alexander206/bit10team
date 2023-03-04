@@ -1,23 +1,77 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Header } from '../components/Header.jsx';
+import { Receta } from '../components/Receta.jsx';
+import imgCheft from '../assets/document/chef.png';
+import '../styles/pages/inicio.scss';
 
-const Inicio = () => {
+export const Inicio = () => {
+  const API = 'https://fakestoreapi.com/products';
+  const [recetas, setrecetas] = useState([]);
+  const [datos, setdatos] = useState(<h1>No hay data</h1>);
+
+  window.addEventListener('load', async () => {
+    let res = await fetch(API);
+    let response = await res.json();
+
+    setrecetas(response);
+  });
+
+  useEffect(() => {
+    let data = recetas.map((item) => {
+      return (
+        <Receta
+          key={item.id}
+          img={item.image}
+          name={item.title}
+          description={item.description}
+          category={item.category}
+        />
+      );
+    });
+
+    setdatos(data);
+  }, [recetas]);
+
   return (
     <>
-      <header>Wendy</header>
-
-      <main>
-        <section>
+      <Header />
+      <main className='main_inicio'>
+        <section className='fondo_banner'>
           <figure>
-            <img src='' alt='' />
+            <h1>SABROSAP</h1>
           </figure>
         </section>
-        <section></section>
-        <section></section>
+        <section className='categorias'>
+          <article>
+            <figure>
+              <figcaption></figcaption>
+              <img src={imgCheft} alt='' />
+            </figure>
+          </article>
+
+          <article className=''>
+            <ul>
+              <li>
+                <button> Alimento</button>
+              </li>
+
+              <li>
+                <button> Alimento</button>
+              </li>
+
+              <li>
+                <button> Alimento</button>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section className='recetas' id='recetas'>
+          {datos}
+        </section>
       </main>
 
       <footer>Adriana</footer>
     </>
   );
 };
-
-export default Inicio;
