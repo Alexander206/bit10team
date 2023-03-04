@@ -5,16 +5,21 @@ import { Container, Row, Col } from "react-bootstrap";
 export const Form = () => {
   return (
     <Container>
-      <Row className="fila">
+       <Row className="fila">
         <Col>
-          <img className="img_receta"
+          <img
+            className="img_receta"
             src="https://i.blogs.es/d05ff1/lasana_bolonesa/1366_2000.jpg"
-            alt=""
+            alt="receta"
           />
         </Col>
         <Col>
-          <label className="titulo_actualizar" htmlFor="actualizar">Actualizar receta</label>
-          <Row><input type="text" className="form_control" id="actualizar"></input></Row>
+          <label className="titulo_actualizar" htmlFor="actualizar">
+            Actualizar receta
+          </label>
+          <Row>
+            <input type="text" className="form_control" id="actualizar"></input>
+          </Row>
         </Col>
         <Col>
           <button
@@ -60,17 +65,51 @@ export const Form = () => {
               </button>
             </div>
             <div className="modal-body">
-              ¿Está seguro que desea enviar este mensaje?
+            <Row className="fila">
+        <Col>
+          <img
+            className="img_receta"
+            src="https://i.blogs.es/d05ff1/lasana_bolonesa/1366_2000.jpg"
+            alt="receta"
+          />
+        </Col>
+        <Col>
+          <label className="titulo_actualizar" htmlFor="actualizar">
+            Actualizar receta
+          </label>
+          <Row>
+            <input type="text" className="form_control" id="actualizar"></input>
+          </Row>
+        </Col>
+        <Col>
+          <button
+            type="button"
+            className="btn_uno"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Enviar
+          </button>
+          <button
+            type="button"
+            className="btn_dos"
+            data-toggle="modal"
+            data-target="#exampleModal"
+          >
+            Actualizar
+          </button>
+        </Col>
+      </Row>
             </div>
             <div className="modal-footer">
               <button
                 type="button"
-                className="btn btn-secondary"
+                className="btn btn-danger"
                 data-dismiss="modal"
               >
                 Cancelar
               </button>
-              <button type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-danger">
                 Enviar
               </button>
             </div>
@@ -78,6 +117,5 @@ export const Form = () => {
         </div>
       </div>
     </Container>
-    
   );
 };

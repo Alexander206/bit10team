@@ -17,14 +17,21 @@
 .form_control{
     font-family: "caladea";
     margin-left: 1rem;
+    padding: 1rem;
     border: none;
     outline: none;
     border-radius: 3rem;
+    color: var(--claro);
+}
+.form_control:focus{
+    background-color: lightslategray;
+    transition: 0.2s;
 }
 
 .btn_uno {
     background-color: var(--rojo);
     border: none;
+    width: 8rem;
     border-radius: 2rem;
     padding: 1rem;
     margin-top: 5rem;
@@ -32,11 +39,24 @@
     color: var(--claro);
 }
 
+.btn_uno:hover{
+    background: var(--rojo);
+    box-shadow: 0 0 10px var(--rojo), 0 0 10px var(--rojo), 0 0 10px var(--rojo);
+    transition: 0.2s;
+}
+
 .btn_dos {
     background-color: var(--rojo);
     border: none;
+    width: 8rem;
     border-radius: 2rem;
     padding: 1rem;
     margin-left: 2rem;
     color: var(--claro);
+}
+
+.btn_dos:hover{
+    background: var(--rojo);
+    box-shadow: 0 0 10px var(--rojo), 0 0 10px var(--rojo), 0 0 10px var(--rojo);
+    transition: 0.2s;
 }
