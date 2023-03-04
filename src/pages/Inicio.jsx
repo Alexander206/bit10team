@@ -1,36 +1,32 @@
 import React, { useEffect, useState } from 'react';
 import { Header } from '../components/Header.jsx';
+import { Footer } from '../components/Footer.jsx';
 import { Receta } from '../components/Receta.jsx';
 import imgCheft from '../assets/document/chef.png';
 import '../styles/pages/inicio.scss';
 
 export const Inicio = () => {
-  const API = 'https://fakestoreapi.com/products';
-  const [recetas, setrecetas] = useState([]);
+  const API = 'https://www.themealdb.com/api/json/v2/9973533/randomselection.php';
   const [datos, setdatos] = useState(<h1>No hay data</h1>);
 
   window.addEventListener('load', async () => {
     let res = await fetch(API);
     let response = await res.json();
 
-    setrecetas(response);
+    setdatos(
+      response.meals.map((item) => {
+        return (
+          <Receta
+            key={item.idMeal}
+            img={item.strMealThumb}
+            name={item.strMeal}
+            description={item.strInstructions}
+            ingredient={[item.strIngredient1, item.strIngredient2, item.strIngredient3, item.strIngredient4]}
+          />
+        );
+      }),
+    );
   });
-
-  useEffect(() => {
-    let data = recetas.map((item) => {
-      return (
-        <Receta
-          key={item.id}
-          img={item.image}
-          name={item.title}
-          description={item.description}
-          category={item.category}
-        />
-      );
-    });
-
-    setdatos(data);
-  }, [recetas]);
 
   return (
     <>
@@ -71,7 +67,7 @@ export const Inicio = () => {
         </section>
       </main>
 
-      <footer>Adriana</footer>
+      <Footer />
     </>
   );
 };
