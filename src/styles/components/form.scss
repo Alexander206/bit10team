@@ -1,34 +1,82 @@
-.fila{
-    background-color: var(--verde);
-}
 
 .img_receta{
-    width: 40%;
+    width: 50%;
     border-radius: 3rem;
     box-shadow: 0 0 10px 5px rgba(75, 76, 76, 0.5);
-    margin-left: 8rem;
+    margin-left: 3rem;
 }
 
 .titulo_actualizar{
     font-family: "barlow";
     color: var(--claro);
     font-size: 2rem;
+    margin-left: -8rem;
 }
 .form_control{
     font-family: "caladea";
-    margin-left: 1rem;
+    margin-left: -8rem;
     padding: 1rem;
     border: none;
     outline: none;
     border-radius: 3rem;
-    color: var(--claro);
+    color: var(--oscuro);
 }
 .form_control:focus{
-    background-color: lightslategray;
+    background-color: rgb(215, 215, 215);
     transition: 0.2s;
 }
 
-.btn_uno {
+.btn_uno{
+    background-color: var(--rojo);
+    border: none;
+    width: 8rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-top: 8rem;
+    margin-left: -46rem;
+    color: var(--claro);
+}
+.btn_uno:hover{
+    background: var(--rojo);
+    box-shadow: 0 0 10px var(--rojo), 0 0 10px var(--rojo), 0 0 10px var(--rojo);
+    transition: 0.2s;
+}
+
+.btn_dos{
+    background-color: var(--rojo);
+    border: none;
+    width: 8rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-top: 8rem;
+    margin-left: 2rem;
+    color: var(--claro);
+}
+
+//modal scss
+.modal-body, .fila{
+    background-color: var(--verde);
+}
+
+.modal-header{
+    background-color: var(--verde);
+    color: var(--rojo);
+    font-family: "barlow";
+}
+.modal-title{
+    font-size: 2rem;
+    margin-left: 3rem;
+}
+
+.close{
+    background-color: var(--verde);
+    padding: 0.5rem;
+    font-size: 2rem;
+    border: none;
+    color: var(--rojo);
+}
+
+.btn-modal_uno{
     background-color: var(--rojo);
     border: none;
     width: 8rem;
@@ -38,25 +86,27 @@
     margin-left: -38rem;
     color: var(--claro);
 }
-
-.btn_uno:hover{
+.btn-modal_uno:hover{
     background: var(--rojo);
     box-shadow: 0 0 10px var(--rojo), 0 0 10px var(--rojo), 0 0 10px var(--rojo);
     transition: 0.2s;
 }
 
-.btn_dos {
+.btn-modal_dos{
     background-color: var(--rojo);
     border: none;
     width: 8rem;
     border-radius: 2rem;
     padding: 1rem;
-    margin-left: 2rem;
+    margin-top: 5rem;
+    margin-left: -38rem;
     color: var(--claro);
 }
-
-.btn_dos:hover{
+.btn-modal_dos:hover{
     background: var(--rojo);
     box-shadow: 0 0 10px var(--rojo), 0 0 10px var(--rojo), 0 0 10px var(--rojo);
     transition: 0.2s;
+}
+.modal-footer{
+    background-color: var(--verde);
 }

@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 export const Form = () => {
   return (
     <Container>
-       <Row className="fila">
+      <Row className="fila">
         <Col>
           <img
             className="img_receta"
@@ -28,7 +28,7 @@ export const Form = () => {
             data-toggle="modal"
             data-target="#exampleModal"
           >
-            Enviar
+            Actualizar
           </button>
           <button
             type="button"
@@ -36,7 +36,7 @@ export const Form = () => {
             data-toggle="modal"
             data-target="#exampleModal"
           >
-            Actualizar
+            Cancelar
           </button>
         </Col>
       </Row>
@@ -53,7 +53,7 @@ export const Form = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="exampleModalLabel">
-                Confirmación de envío
+                Actualización
               </h5>
               <button
                 type="button"
@@ -65,52 +65,38 @@ export const Form = () => {
               </button>
             </div>
             <div className="modal-body">
-            <Row className="fila">
-        <Col>
-          <img
-            className="img_receta"
-            src="https://i.blogs.es/d05ff1/lasana_bolonesa/1366_2000.jpg"
-            alt="receta"
-          />
-        </Col>
-        <Col>
-          <label className="titulo_actualizar" htmlFor="actualizar">
-            Actualizar receta
-          </label>
-          <Row>
-            <input type="text" className="form_control" id="actualizar"></input>
-          </Row>
-        </Col>
-        <Col>
-          <button
-            type="button"
-            className="btn_uno"
-            data-toggle="modal"
-            data-target="#exampleModal"
-          >
-            Enviar
-          </button>
-          <button
-            type="button"
-            className="btn_dos"
-            data-toggle="modal"
-            data-target="#exampleModal"
-          >
-            Actualizar
-          </button>
-        </Col>
-      </Row>
+              <Row className="fila">
+                <Col>
+                  <img
+                    className="img_receta"
+                    src="https://i.blogs.es/d05ff1/lasana_bolonesa/1366_2000.jpg"
+                    alt="receta"
+                  />
+                </Col>
+                <Col>
+                  <label className="titulo_actualizar" htmlFor="actualizar">
+                    Actualizar receta
+                  </label>
+                  <Row>
+                    <input
+                      type="text"
+                      className="form_control"
+                      id="actualizar"
+                    ></input>
+                  </Row>
+                </Col>
+              </Row>
             </div>
             <div className="modal-footer">
               <button
                 type="button"
-                className="btn btn-danger"
+                className="btn-modal_uno"
                 data-dismiss="modal"
               >
-                Cancelar
+                Actualizar
               </button>
-              <button type="button" className="btn btn-danger">
-                Enviar
+              <button type="button" className="btn-modal_dos">
+                Cancelar
               </button>
             </div>
           </div>
