@@ -1,43 +1,36 @@
-@import url('./vars.scss');
-@font-face {
-    font-family: "caladea";
-    src: url("../assets/font/Caladea-Regular.ttf") format("truetype");
-  } 
-@font-face {
-    font-family: "barlow";
-    src: url("../assets/font/BarlowCondensed-Bold.ttf") format("truetype");
-  }  
+@import url("./vars.scss");
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 
-    padding-top: 7rem;
+  padding-top: 7rem;
 }
 
 h1 {
-    color: var(--rojo);
-    font-size: 3rem;
+  color: var(--rojo);
+  font-size: 3rem;
 }
 
 body::-webkit-scrollbar {
-    width: 7px;
+  width: 7px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--oscuro);
-    border-radius: 5px;
-    height: 70%;
+  background-color: var(--oscuro);
+  border-radius: 5px;
+  height: 70%;
 }
