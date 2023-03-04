@@ -1,0 +1,42 @@
+.fila{
+    background-color: var(--verde);
+}
+
+.img_receta{
+    width: 40%;
+    border-radius: 3rem;
+    box-shadow: 0 0 10px 5px rgba(75, 76, 76, 0.5);
+    margin-left: 8rem;
+}
+
+.titulo_actualizar{
+    font-family: "barlow";
+    color: var(--claro);
+    font-size: 2rem;
+}
+.form_control{
+    font-family: "caladea";
+    margin-left: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 3rem;
+}
+
+.btn_uno {
+    background-color: var(--rojo);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-top: 5rem;
+    margin-left: -38rem;
+    color: var(--claro);
+}
+
+.btn_dos {
+    background-color: var(--rojo);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-left: 2rem;
+    color: var(--claro);
+}

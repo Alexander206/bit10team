@@ -1,5 +1,12 @@
 @import url('./vars.scss');
-
+@font-face {
+    font-family: "caladea";
+    src: url("../assets/font/Caladea-Regular.ttf") format("truetype");
+  } 
+@font-face {
+    font-family: "barlow";
+    src: url("../assets/font/BarlowCondensed-Bold.ttf") format("truetype");
+  }  
 * {
     box-sizing: border-box;
     margin: 0;
