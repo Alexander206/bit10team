@@ -1,10 +1,14 @@
 .receta {
   display: flex;
   justify-content: space-between;
-  background-color: var(--oscuro);
+  background-color: var(--claro);
+  box-shadow: rgb(83, 83, 83);
 
   width: 100%;
-  max-width: 60rem;
+  max-width: 50rem;
+  border-radius: 2rem;
+  border: none;
+
   padding: 2rem;
   margin: 1rem;
 
@@ -33,14 +37,14 @@
     h3 {
       font-weight: bolder;
       font-size: 1.8rem;
-      color: var(--claro);
+      color: var(--oscuro);
 
       margin-bottom: 1rem;
     }
 
     p {
       font-size: 1.6rem;
-      color: var(--claro);
+      color: var(--oscuro);
     }
 
     ul {

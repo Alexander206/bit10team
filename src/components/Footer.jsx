@@ -1,13 +1,14 @@
 import React from 'react';
-import '../styles/footer.scss';
+import '../styles/components/footer.scss';
+import Logo from '../assets/document/logoTecnoPower.png';
 
 export const Footer = () => {
   return (
     <footer className='container-fluid'>
       <div className='main-container'>
         <div className='row'>
-          <div className='col-md-2 text-center align-middle'>
-            <img className='rounded-circle main-logo' alt='171x180' src='https://github.com/Alexander206/bit10team/blob/desarrollo/src/assets/document/logoTecnoPower.png?raw=true'></img>
+          <div className='col-md-4 text-center align-middle'>
+            <img className='rounded-circle main-logo' alt='171x180' src={Logo}></img>
           </div>
 
           <div className='col-md-2 text-center align-middle'>
