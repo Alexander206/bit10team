@@ -1,36 +1,35 @@
 import React from 'react';
+import '../styles/components/form.scss';
 import { Container, Row, Col } from 'react-bootstrap';
-import '../styles/components/formEliminar.scss';
 
-export const FormEliminar = () => {
+export const Form = () => {
   return (
     <Container>
-      <Row className='fila_eliminar'>
+      <Row className='fila'>
         <Col>
-          <img
-            className='img_eliminar'
-            src='https://img.cocinarico.es/2020-10/rollitos-de-poll-con-jamon-y-queso-1.webp'
-            alt='eliminar'></img>
+          <img className='img_receta' src='https://i.blogs.es/d05ff1/lasana_bolonesa/1366_2000.jpg' alt='receta' />
         </Col>
         <Col>
-          <label className='titulo_eliminar' htmlFor='eliminar'>
-            Elimina tu receta
+          <label className='titulo_actualizar' htmlFor='actualizar'>
+            Actualizar receta
           </label>
           <Row>
-            <input type='text' className='form_control_eliminar' id='eliminar'></input>
+            <input type='text' className='form_control' id='actualizar'></input>
           </Row>
         </Col>
         <Col>
-          <button type='button' className='btn_eliminar' data-toggle='modal' data-target='#exampleModalDos'>
-            Eliminar
+          <button type='button' className='btn_uno' data-toggle='modal' data-target='#exampleModal'>
+            Actualizar
+          </button>
+          <button type='button' className='btn_dos' data-toggle='modal' data-target='#exampleModal'>
+            Cancelar
           </button>
         </Col>
       </Row>
-
       {/* //Modal */}
       <div
         className='modal fade'
-        id='exampleModalDos'
+        id='exampleModal'
         tabindex='-1'
         role='dialog'
         aria-labelledby='exampleModalLabel'
@@ -39,33 +38,37 @@ export const FormEliminar = () => {
           <div className='modal-content'>
             <div className='modal-header'>
               <h5 className='modal-title' id='exampleModalLabel'>
-                Eliminación
+                Actualización
               </h5>
               <button type='button' className='close' data-dismiss='modal' aria-label='Close'>
                 <span aria-hidden='true'>&times;</span>
               </button>
             </div>
             <div className='modal-body'>
-              <Row className='fila_eliminar'>
+              <Row className='fila'>
                 <Col>
                   <img
-                    className='img_eliminar'
-                    src='https://img.cocinarico.es/2020-10/rollitos-de-poll-con-jamon-y-queso-1.webp'
-                    alt='eliminar'></img>
+                    className='img_receta'
+                    src='https://i.blogs.es/d05ff1/lasana_bolonesa/1366_2000.jpg'
+                    alt='receta'
+                  />
                 </Col>
                 <Col>
-                  <label className='titulo_eliminar' htmlFor='eliminar'>
-                    Elimina tu receta
+                  <label className='titulo_actualizar' htmlFor='actualizar'>
+                    Actualizar receta
                   </label>
                   <Row>
-                    <input type='text' className='form_control_eliminar' id='eliminar'></input>
+                    <input type='text' className='form_control' id='actualizar'></input>
                   </Row>
                 </Col>
               </Row>
             </div>
             <div className='modal-footer'>
               <button type='button' className='btn-modal_uno' data-dismiss='modal'>
-                Eliminar
+                Actualizar
+              </button>
+              <button type='button' className='btn-modal_dos'>
+                Cancelar
               </button>
             </div>
           </div>
