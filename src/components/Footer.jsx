@@ -1,5 +1,6 @@
 import React from 'react';
-import '../styles/footer.scss';
+import '../styles/components/footer.scss';
+import Logo from '../assets/document/logoTecnoPower.png';
 
 export const Footer = () => {
   return (
@@ -7,7 +8,7 @@ export const Footer = () => {
       <div className='main-container'>
         <div className='row'>
           <div className='col-md-4 text-center align-middle'>
-            <img className='rounded-circle main-logo' alt='171x180' src='../assets/document/logoTecnoPower.png'></img>
+            <img className='rounded-circle main-logo' alt='171x180' src={Logo}></img>
           </div>
 
           <div className='col-md-2 text-center align-middle'>
