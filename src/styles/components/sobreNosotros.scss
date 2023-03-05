@@ -1,0 +1,99 @@
+.contenedor_completo{
+  background-color: var(--azul);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titulo_profesion{
+  color: var(--claro);
+  font-family: "caladea";
+  display: flex;
+  margin-top: 15rem;
+  font-size: 2rem;
+}
+
+.nombre_programador{
+  color: rgb(103, 104, 104);
+  font-family: "barlow";
+  font-size: 5rem;
+}
+.img_linea{
+  margin-left: -2rem;
+}
+
+.descripcion{
+  color: rgb(103, 104, 104);
+  font-family: "caladea";
+  font-size: 1.6rem;
+}
+
+.img_jeison{
+  display: flex;
+  width: 50%;
+  margin-left: 62rem;
+  margin-top: -173rem;
+}
+
+.img_adriana{
+  display: flex;
+  width: 50%;
+  margin-left: 62rem;
+  margin-top: -4rem;
+}
+
+.img_wendy{
+  display: flex;
+  width: 50%;
+  margin-left: 62rem;
+  margin-top: -25rem;
+}
+
+.img_eleiza{
+  display: flex;
+  width: 50%;
+  margin-left: 62rem;
+  margin-top: -10rem;
+}
+
+.btn_portafolio{
+  background-color: var(--claro);
+  border: none;
+  border-radius: 3rem;
+  width: 50rem; 
+  margin-top: -318rem;
+  font-size: 2rem;
+}
+
+.btn_portafolio_adriana{
+  background-color: var(--claro);
+  border: none;
+  border-radius: 3rem;
+  width: 50rem; 
+  margin-top: -233rem;
+}
+
+.btn_portafolio_wendy{
+  background-color: var(--claro);
+  border: none;
+  border-radius: 3rem;
+  width: 50rem; 
+  margin-top: -140rem;
+}
+
+.btn_portafolio_eleiza{
+  background-color: var(--claro);
+  border: none;
+  border-radius: 3rem;
+  width: 50rem;
+  margin-top: -52rem;
+}
+
+.informacion{
+  margin-top: 2rem;
+}
+
+.ion-icon{
+  color: var(--azul);
+}
