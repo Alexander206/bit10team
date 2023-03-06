@@ -1,75 +1,99 @@
-main{
-  background-color: var(--azul);
-  display: flex;
-}
-.section_Texto {
+.contenedor_completo{
   background-color: var(--azul);
   width: 100%;
-  height: 100%;
-  padding: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.col-md-2 {
-  margin-left: 5rem;
-}
-.texto_Profesion{
-  font-family: "caladea";
+
+.titulo_profesion{
   color: var(--claro);
-  font-size: 1rem;
-  margin-left: 1rem;
-  padding: 1rem;
-}
-.nombre_Programador{
-  font-family: "barlow";
-  color: var(--oscuro);
+  font-family: "caladea";
+  display: flex;
+  margin-top: 15rem;
   font-size: 2rem;
-  margin-left: 1rem;
-  padding: 1rem;
 }
-.descripcion_Perfil {
+
+.nombre_programador{
+  color: rgb(103, 104, 104);
   font-family: "barlow";
-  color: var(--oscuro);
-  font-size: 1rem;
-  margin-left: 1rem;
-  padding: 1rem;
+  font-size: 5rem;
 }
-.btn_Linkedin {
-  background-color: var(--claro);
-  border: none;
-  width: 8rem;
-  border-radius: 2rem;
-  padding: 1rem;
-  margin-top: 8rem;
-  margin-left: 1rem;
-  color: var(--oscuro);
+.img_linea{
+  margin-left: -2rem;
+}
+
+.descripcion{
+  color: rgb(103, 104, 104);
   font-family: "caladea";
+  font-size: 1.6rem;
 }
-.btn_Linkedin:hover{
-  background: var(--claro);
-  box-shadow: 0 0 10px var(--azulClaro), 0 0 10px var(--azul), 0 0 10px var(--rojo);
-  transition: 0.2s;
-}
-.btn_GitHub {
-  background-color: var(--claro);
-  border: none;
-  width: 8rem;
-  border-radius: 2rem;
-  padding: 1rem;
-  margin-top: 8rem;
-  margin-right: 1rem;
-  color: var(--oscuro);
-  font-family: "caladea";
-}
-.btn_GitHub:hover{
-  background: var(--claro);
-  box-shadow: 0 0 10px var(--azulClaro), 0 0 10px var(--azul), 0 0 10px var(--rojo);
-  transition: 0.2s;
-}
-.img_Foto {
+
+.img_jeison{
+  display: flex;
   width: 50%;
-  border-radius: 3rem;
-  box-shadow: 0 0 10px 5px rgba(75, 76, 76, 0.5);
-  margin-right: 3rem;
+  margin-left: 62rem;
+  margin-top: -173rem;
 }
-.texto_RowDer {
-  margin-right: 5rem;
+
+.img_adriana{
+  display: flex;
+  width: 50%;
+  margin-left: 62rem;
+  margin-top: -4rem;
+}
+
+.img_wendy{
+  display: flex;
+  width: 50%;
+  margin-left: 62rem;
+  margin-top: -25rem;
+}
+
+.img_eleiza{
+  display: flex;
+  width: 50%;
+  margin-left: 62rem;
+  margin-top: -10rem;
+}
+
+.btn_portafolio{
+  background-color: var(--claro);
+  border: none;
+  border-radius: 3rem;
+  width: 50rem; 
+  margin-top: -318rem;
+  font-size: 2rem;
+}
+
+.btn_portafolio_adriana{
+  background-color: var(--claro);
+  border: none;
+  border-radius: 3rem;
+  width: 50rem; 
+  margin-top: -233rem;
+}
+
+.btn_portafolio_wendy{
+  background-color: var(--claro);
+  border: none;
+  border-radius: 3rem;
+  width: 50rem; 
+  margin-top: -140rem;
+}
+
+.btn_portafolio_eleiza{
+  background-color: var(--claro);
+  border: none;
+  border-radius: 3rem;
+  width: 50rem;
+  margin-top: -52rem;
+}
+
+.informacion{
+  margin-top: 2rem;
+}
+
+.ion-icon{
+  color: var(--azul);
 }
