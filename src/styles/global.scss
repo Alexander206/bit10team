@@ -27,7 +27,7 @@ body {
   justify-content: center;
   background: linear-gradient(to top, #b638554f, #4d172452), url('../assets/img/background.jpg') !important;
   background-position: center !important;
-  background-size: 100% !important;
+  background-size: cover !important;
   background-attachment: fixed !important;
   min-height: 100vh;
 
@@ -37,13 +37,14 @@ body {
 }
 
 body::-webkit-scrollbar {
+  background-color: var(--oscuro);
   width: 7px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--oscuro);
+  background-color: var(--rojo);
   border-radius: 5px;
-  height: 70%;
+  height: 40%;
 }
 
 figure {

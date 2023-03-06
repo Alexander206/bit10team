@@ -2,17 +2,36 @@ import React, { useState, useEffect } from 'react';
 import { Header } from '../components/Header.jsx';
 import { Footer } from '../components/Footer.jsx';
 import { Receta } from '../components/Receta.jsx';
+import { FormFiltro } from '../components/FormFiltro.jsx';
 import imgCheft from '../assets/document/chef.png';
 import '../styles/pages/inicio.scss';
 
 export const Inicio = () => {
   const API = 'https://www.themealdb.com/api/json/v2/9973533/randomselection.php';
 
+  const btnCreate = (
+    <Receta
+      key='create_recipe'
+      id='create_recipe'
+      name='New recipe'
+      img='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHEkJyJjmf3mAb3ovVger1-iynxPG4Ke9e1Q&usqp=CAU'
+      category='New category'
+      ingredient={['Ingredient 1', 'Ingredient 2', 'Ingredient 3', 'Ingredient 4']}
+      instruction='I am a recipe and I should have a few simple steps that are easy to follow. Whether you are a beginner or an experienced cook, my instructions will guide you through the process of creating a delicious dish that you can enjoy with your friends and family.'
+      video=''
+      link=''
+      ciudad='Country'
+    />
+  );
+
   const [data, setdata] = useState([]);
   const [recetas, setrecetas] = useState(<h1>No hay data</h1>);
   const [ingredients, setingredients] = useState();
   const [filtrerIgredients, setfiltrerIgredients] = useState([]);
   const [showFiltrers, setshowFiltrers] = useState([]);
+
+  /* Modal */
+  const [show, setShow] = useState(false);
 
   // Vigilante a cambios en la lista
   useEffect(() => {
@@ -28,27 +47,38 @@ export const Inicio = () => {
         }
         return false;
       });
-
-      let filtrers = filtrerIgredients.map((item) => (
-        <li>
-          <button>{item}</button>
-        </li>
-      ));
-
-      setshowFiltrers(filtrers);
     } else {
       arrayTemp = data;
     }
+
+    let filtrers = filtrerIgredients.map((item) => (
+      <li key={item}>
+        <button onClick={() => deleteFiltrer(item)}>{item}</button>
+      </li>
+    ));
+
+    setshowFiltrers(filtrers);
 
     // Creando el componente de la receta
     let listaRecetas = arrayTemp.map((item) => {
       return (
         <Receta
           key={item.idMeal}
-          img={item.strMealThumb}
+          id={item.idMeal}
           name={item.strMeal}
+          img={item.strMealThumb}
           category={item.strCategory}
-          ingredient={[item.strIngredient1, item.strIngredient2, item.strIngredient3, item.strIngredient4]}
+          ingredient={[
+            item.strIngredient1,
+            item.strIngredient2,
+            item.strIngredient3,
+            item.strIngredient4,
+            item.strIngredient5,
+          ]}
+          instruction={item.strInstructions}
+          video={item.strYoutube}
+          link={item.strSource}
+          ciudad={item.strArea}
         />
       );
     });
@@ -114,15 +144,10 @@ export const Inicio = () => {
     setingredients(resIngredients);
   });
 
-  // Función para los filtros
-  const filtrer = (event) => {
-    event.preventDefault();
-
-    let data = [...filtrerIgredients, event.target.ingredient.value].filter(
-      (item, index, array) => array.indexOf(item) === index,
-    );
-
-    setfiltrerIgredients(data);
+  // Función para borrar el filtro
+  const deleteFiltrer = (name) => {
+    let array = filtrerIgredients.filter((item) => item !== name);
+    setfiltrerIgredients(array);
   };
 
   return (
@@ -133,27 +158,22 @@ export const Inicio = () => {
           <figure>
             <h1>SABROSAPP</h1>
           </figure>
-          <form className='buscador' onSubmit={filtrer}>
-            <label>
-              <input name='ingredient' list='ingredientes' placeholder='¿Qué ingredientes tienes?' />
-              <datalist id='ingredientes'>{ingredients}</datalist>
-              <button>
-                <ion-icon name='search-circle-outline'></ion-icon>
-              </button>
-            </label>
-          </form>
+          <FormFiltro
+            ingredients={ingredients}
+            filtrerIgredients={filtrerIgredients}
+            setfiltrerIgredients={setfiltrerIgredients}
+          />
         </section>
 
         <section className='categorias'>
           <article>
             <figure>
-              <figcaption></figcaption>
-              <img src={imgCheft} alt='' />
+              <figcaption>Ingredients</figcaption>
             </figure>
           </article>
 
           <article className=''>
-            <ul className='ingredients'>{showFiltrers}</ul>
+            <ul className='ingredients'>{showFiltrers.length ? showFiltrers : <button>All recipes</button>}</ul>
           </article>
         </section>
 
