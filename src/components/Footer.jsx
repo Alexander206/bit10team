@@ -7,11 +7,11 @@ export const Footer = () => {
     <footer className='container-fluid'>
       <div className='main-container'>
         <div className='row'>
-          <div className='col-md-4 text-center align-middle'>
+          <div className='col-lg-4 col-sm-4 text-center align-middle col-container'>
             <img className='rounded-circle main-logo' alt='171x180' src={Logo}></img>
           </div>
 
-          <div className='col-md-2 text-center align-middle'>
+          <div className='col-lg-2 col-sm-4 text-center align-middle'>
             <img
               className='rounded-circle circle'
               alt='171x180'
@@ -20,7 +20,7 @@ export const Footer = () => {
               <div className='col-md-12 text-center name'>Jeisson Gavilán</div>
             </div>
             <div className='row'>
-              <div className='col-md-6'>
+              <div className='col-6'>
                 <a href='https://www.linkedin.com/in/jeisson-alexander/' target='_blank'>
                   <img
                     className='rounded-circle logo1'
@@ -28,7 +28,7 @@ export const Footer = () => {
                     src='https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png'></img>
                 </a>
               </div>
-              <div className='col-md-6'>
+              <div className='col-6'>
                 <a href='https://github.com/Alexander206' target='_blank'>
                   <img
                     className='rounded-circle logo2'
@@ -38,7 +38,7 @@ export const Footer = () => {
               </div>
             </div>
           </div>
-          <div className='col-md-2 text-center align-middle'>
+          <div className='col-lg-2 col-sm-4 text-center align-middle'>
             <img
               className='rounded-circle circle'
               alt='171x180'
@@ -47,7 +47,7 @@ export const Footer = () => {
               <div className='col-md-12 text-center name'>Wendy Carlos</div>
             </div>
             <div className='row'>
-              <div className='col-md-6'>
+              <div className='col-6'>
                 <a href='https://www.linkedin.com/in/wendy-alejandra-carlos-mu%C3%B1oz/' target='_blank'>
                   <img
                     className='rounded-circle logo1'
@@ -55,7 +55,7 @@ export const Footer = () => {
                     src='https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png'></img>
                 </a>
               </div>
-              <div className='col-md-6'>
+              <div className='col-6'>
                 <a href='https://github.com/wenaleja' target='_blank'>
                   <img
                     className='rounded-circle logo2'
@@ -66,7 +66,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className='col-md-2 text-center align-middle'>
+          <div className='col-lg-2 col-sm-4 text-center align-middle'>
             <img
               className='rounded-circle circle'
               alt='171x180'
@@ -75,7 +75,7 @@ export const Footer = () => {
               <div className='col-md-12 text-center name'>Adriana Moreno</div>
             </div>
             <div className='row'>
-              <div className='col-md-6 text-center'>
+              <div className='col-6 text-center'>
                 <a href='https://www.linkedin.com/in/adrianamorenogutierrez/' target='_blank'>
                   <img
                     className='rounded-circle logo1'
@@ -83,7 +83,7 @@ export const Footer = () => {
                     src='https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png'></img>
                 </a>
               </div>
-              <div className='col-md-6 text-center'>
+              <div className='col-6 text-center'>
                 <a href='https://github.com/soyadrianamorenogutierrez' target='_blank'>
                   <img
                     className='rounded-circle logo2'
@@ -94,7 +94,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <div className='col-md-2 text-center align-middle'>
+          <div className='col-lg-2 col-sm-4 text-center align-middle'>
             <img
               className='rounded-circle circle'
               alt='171x180'
@@ -103,7 +103,7 @@ export const Footer = () => {
               <div className='col-md-12 text-center name'>Eleiza Caridad</div>
             </div>
             <div className='row'>
-              <div className='col-md-6 text-center'>
+              <div className='col-6 text-center'>
                 <a href='https://www.linkedin.com/in/eleiza-caridad/' target='_blank'>
                   <img
                     className='rounded-circle logo1'
@@ -111,7 +111,7 @@ export const Footer = () => {
                     src='https://www.citypng.com/public/uploads/preview/linkedin-square-white-icon-transparent-png-11640440452zi2ykndpw2.png'></img>
                 </a>
               </div>
-              <div className='col-md-6 text-center'>
+              <div className='col-6 text-center'>
                 <a href='https://github.com/eleizac' target='_blank'>
                   <img
                     className='rounded-circle logo2'

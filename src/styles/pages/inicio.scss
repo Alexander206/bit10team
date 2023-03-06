@@ -5,82 +5,45 @@
   justify-content: center;
 
   width: 100%;
-  max-width: 120rem;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0);
-
   margin-top: 5rem;
 
   .fondo_banner {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.425);
+
+    background: linear-gradient(to top, #da436620, #da43664a), url('../../assets/img/background.jpg');
+    background-position: center;
+    background-size: cover;
 
     width: 100%;
     min-height: 30rem;
 
     h1 {
-      letter-spacing: 2px;
       color: var(--claro);
       font-size: 4rem;
       font-weight: bolder;
     }
   }
 
-  .buscador {
-    position: relative;
-    top: 13rem;
+  .categorias {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
 
-    label {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      input {
-        font-size: 1.6rem;
-        border-radius: 2rem;
-        border: 1px solid grey;
-        box-shadow: none;
-        padding: 1rem;
-        padding-right: 5rem;
-      }
-
-      button {
-        position: relative;
-        right: 3.5rem;
-        display: flex;
-        align-self: center;
-        justify-content: center;
-
-        font-size: 2.6rem;
-        color: grey;
-        background-color: rgba(255, 255, 255, 0);
-        border: none;
-        margin: 0;
-      }
-    }
-  }
-
-  .categorias {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-
     width: 100%;
-    background-color: var(--oscuro);
 
     article {
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 100%;
 
-      ul {
+      .ingredients {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
         list-style: none;
@@ -90,6 +53,8 @@
           color: var(--claro);
           border-radius: 2rem;
           border: none;
+
+          font-size: 1.6rem;
           padding: 1rem;
           margin: 1rem;
 
@@ -107,10 +72,33 @@
 
   .recetas {
     display: flex;
+    flex-direction: column;
+    grid-gap: 3rem;
+    align-items: stretch;
+    justify-content: space-around;
+    width: 100%;
+    background-color: var(--claro);
+    padding: 2rem;
+
+    .container_receta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+
+  .main_inicio .recetas {
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    background-color: var(--claro);
+    background-color: var(--oscuro);
   }
+
+
 }

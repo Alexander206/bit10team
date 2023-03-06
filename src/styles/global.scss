@@ -9,16 +9,6 @@
   src: url('../assets/font/Caladea-Regular.ttf');
 }
 
-@font-face {
-  font-family: 'Barlow';
-  src: url('../assets/font/BarlowCondensed-Bold.ttf');
-}
-
-@font-face {
-  font-family: 'Caladea';
-  src: url('../assets/font/Caladea-Regular.ttf');
-}
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -32,29 +22,25 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   justify-content: center;
-  background: linear-gradient(to top, #b638554f, #4d172452), url('../assets/img/background.jpg') !important;
-  background-position: center !important;
-  background-size: 100% !important;
-  background-attachment: fixed !important;
   min-height: 100vh;
 
-  figure {
-    margin: 0;
-  }
+  padding-top: 7rem;
+}
+
+h1 {
+  color: var(--rojo);
+  font-size: 3rem;
 }
 
 body::-webkit-scrollbar {
+  background-color: var(--oscuro);
   width: 7px;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: var(--oscuro);
+  background-color: var(--rojo);
   border-radius: 5px;
-  height: 70%;
-}
-
-figure {
-  margin: 0;
+  height: 40%;
 }

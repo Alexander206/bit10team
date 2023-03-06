@@ -11,6 +11,11 @@ footer {
 
     .row {
       width: 100%;
+      .col-container {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      }
     }
 
     .main-logo {
@@ -23,6 +28,8 @@ footer {
       height: auto;
       width: 13rem;
       padding: 1%;
+      text-align: center;
+      
     }
 
     .name {

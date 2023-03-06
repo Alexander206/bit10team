@@ -14,22 +14,22 @@ export const Header = () => {
       </figure>
 
       <nav className='navegacion'>
-        <Link className='inicio' to='/Inicio'>
-          Inicio
+        <Link className='inicio' to='/'>
+          Home
         </Link>
 
         <Link className='sobre' to='/SobreNosotros'>
-          Sobre Nosotros
+          About
         </Link>
       </nav>
 
       <section className='botones'>
         <Link className='iniciar' to='/Login'>
-          Iniciar Sesión
+          Login
         </Link>
 
         <Link className='registrar' to='/Registrate'>
-          Registrate
+          Register
         </Link>
       </section>
     </header>

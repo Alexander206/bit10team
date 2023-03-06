@@ -1,0 +1,130 @@
+.modal_receta {
+  background: linear-gradient(to top, #b638554f, #4d172452);
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  article {
+    width: 100%;
+    max-width: 80rem;
+    padding: 2rem;
+    border-radius: 2rem;
+
+    main {
+      display: flex;
+      grid-gap: 1rem;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        font-size: 2.4rem;
+        color: var(--rojo);
+      }
+
+      .video {
+        border-radius: 2rem;
+        width: 100%;
+        height: 22.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .container_options {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        .container_btn {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          button {
+            background-color: var(--rojo);
+            color: var(--claro);
+            border-radius: 2rem;
+            border: none;
+            font-size: 1.6rem;
+            padding: 1rem;
+            margin: 1rem;
+            transition: 0.2s;
+          }
+
+          button:hover {
+            cursor: pointer;
+            box-shadow: 0 0 0.7rem var(--rojo);
+            transition: 0.2s;
+          }
+
+          button:nth-child(1) {
+            background-color: var(--verde);
+          }
+
+          button:nth-child(1):hover {
+            box-shadow: 0 0 0.7rem var(--verde);
+          }
+        }
+
+        .container_location {
+          span {
+            font-size: 1.6rem;
+            background-color: var(--oscuro);
+            color: var(--claro);
+            border: 1px solid var(--verde);
+            border-radius: 2rem;
+            padding: 1rem 2rem;
+          }
+        }
+      }
+
+      p {
+        font-size: 1.6rem;
+
+
+
+        a {
+          margin-left: 1rem;
+        }
+      }
+    }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      button {
+        background-color: var(--rojo);
+        color: var(--claro);
+        border-radius: 2rem;
+        border: none;
+        font-size: 1.6rem;
+        padding: 1rem;
+        margin: 1rem;
+        transition: 0.2s;
+      }
+
+      button:hover {
+        cursor: pointer;
+        box-shadow: 0 0 0.7rem var(--rojo);
+        transition: 0.2s;
+      }
+    }
+  }
+}
+
+@media (min-width:800px) {
+  .modal_receta {
+    article {
+      main {
+        .video {
+          height: 38rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
