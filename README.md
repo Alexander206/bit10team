@@ -141,4 +141,4 @@ SanSerif : Morganite
 
 Docente : Javier Andres 
 <br/>
-Desarrollo Front End React
+Bit: Desarrollo Front End React
