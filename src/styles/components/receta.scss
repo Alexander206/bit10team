@@ -1,0 +1,114 @@
+.receta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--claro);
+
+  width: 90%;
+  max-width: 50rem;
+  border-radius: 2rem;
+  border: 1px solid gray;
+
+  padding: 2rem;
+  margin: 1rem;
+
+  figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18rem;
+    height: 18em;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0 0 8px rgb(83, 83, 83);
+    overflow: hidden;
+
+    margin-bottom: 2rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    h3 {
+      width: 70%;
+      font-weight: bolder;
+      font-size: 1.8rem;
+      color: var(--oscuro);
+
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: var(--oscuro);
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        color: var(--claro);
+        font-size: 1.6rem;
+        font-weight: bold;
+        background-color: var(--verde);
+        border-radius: 2rem;
+        padding: 0.5rem 1rem;
+        margin: 0.5rem;
+      }
+    }
+  }
+}
+
+.receta:hover {
+  box-shadow: 0 0 0.5rem gray;
+}
+
+@media (min-width: 800px) {
+  .receta {
+    flex-direction: row;
+    align-items: flex-start;
+    width: 50rem;
+    padding: 1rem;
+
+    figure {
+      width: 12rem;
+      height: 12rem;
+      border-radius: 3rem;
+      margin: 1rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    article {
+      width: 70%;
+      text-align: start;
+      align-items: flex-start;
+      margin: 1rem;
+
+      ul {
+        top: 100%;
+        width: 100%;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
