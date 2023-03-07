@@ -21,6 +21,10 @@ export const Header = () => {
         <Link className='sobre' to='/SobreNosotros'>
           About
         </Link>
+        
+        <Link className='sobre' to='/NewRecipe'>
+        NewRecipe
+        </Link>
       </nav>
 
       <section className='botones'>
