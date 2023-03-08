@@ -25,6 +25,9 @@ export const Header = () => {
         <Link className='sobre' to='/NewRecipe'>
         NewRecipe
         </Link>
+        <Link className='sobre' to='/indexprueba'>
+        index prueba
+        </Link>
       </nav>
 
       <section className='botones'>
