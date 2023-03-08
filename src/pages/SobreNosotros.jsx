@@ -23,7 +23,7 @@ export const SobreNosotros = () => {
                 <figure>
                   <img className='img_linea' src={linea} alt='linea' />
                 </figure>
-                <p className="descripcion" >Soy entusiasta por aprender y usar nuevas tecnologías del desarrollo web, me apasiona el diseño, <br /> la programación y la creación de productos digitales. Al ser Licenciando en Diseño Técnológico, <br /> mis habilidades docente han fortalecido la comunicación, la dirección de grupos y la adaptabilidad.</p>
+                <p className="descripcion" >Soy entusiasta por aprender y usar nuevas tecnologías del desarrollo web, me apasiona el diseño, la programación y la creación de productos digitales. Al ser Licenciando en Diseño Técnológico, mis habilidades docente han fortalecido la comunicación, la dirección de grupos y la adaptabilidad.</p>
               </div>
             </div>
             <div className="col-lg-6">
@@ -48,7 +48,7 @@ export const SobreNosotros = () => {
                 <figure>
                   <img className='img_linea' src={linea} alt='linea' />
                 </figure>
-                <p className="descripcion" >Desarrolladora Web Frontend junior, con conocimientos técnicos en: HTML, CSS, Javascript y React. <br />Formación en Cloud computing, Azure, AWS, Analítica de datos, ISO 27001, Scrum y Lean six sigma. <br />Experiencia en análisis, planeación y documentación de pruebas manuales, asegurando parametros <br /> de calidad del software. </p>
+                <p className="descripcion" >Desarrolladora Web Frontend junior, con conocimientos técnicos en: HTML, CSS, Javascript y React. Formación en Cloud computing, Azure, AWS, Analítica de datos, ISO 27001, Scrum y Lean six sigma. Experiencia en análisis, planeación y documentación de pruebas manuales, asegurando parametros <br /> de calidad del software. </p>
               </div>
             </div>
             <div className="col-lg-6">
@@ -58,10 +58,10 @@ export const SobreNosotros = () => {
             </div>
             <div className="row">
               <div className="col-lg-6">
-                <Button variant="light p-4 " href="https://soyadrianamorenogutierrez.github.io/bit07me/" className="btn_portafolio"><ion-icon name="briefcase-outline"></ion-icon>linkedin</Button>{' '}
+                <Button variant="light p-4 " href="https://soyadrianamorenogutierrez.github.io/bit07me/" className="btn_portafolio_adriana"><ion-icon name="briefcase-outline"></ion-icon>Portafolio</Button>{' '}
               </div>
               <div className="col-lg-6">
-                <Button variant="light p-4" href="https://github.com/soyadrianamorenogutierrez" className="btn_portafolio"><ion-icon name="person-add-outline"></ion-icon>GitHub</Button>
+                <Button variant="light p-4" href="https://github.com/soyadrianamorenogutierrez" className="btn_portafolio_adriana"><ion-icon name="person-add-outline"></ion-icon>GitHub</Button>
               </div>
             </div>
           </div>
@@ -73,7 +73,7 @@ export const SobreNosotros = () => {
                 <figure>
                   <img className='img_linea' src={linea} alt='linea' />
                 </figure>
-                <p className="descripcion" >Soy una persona proactiva, me gusta trabajar en equipo y con toda la actitud de aprender día a día, <br /> con experiencia en el área de creación de contenido para redes sociales, audiovisual y fotografía. <br /> En busca de crecer de forma profesional y desarrollar nuevas habilidades creativas. La creación <br /> de páginas web y entusiasta para el seguimiento de la misma para poder fortalecer las habilidades <br /> necesarias para las creaciones digitales. Con las herramientas HTML, CSS, JavaScript.</p>
+                <p className="descripcion" >Soy una persona proactiva, me gusta trabajar en equipo y con toda la actitud de aprender día a día,con experiencia en el área de creación de contenido para redes sociales, audiovisual y fotografía. En busca de crecer de forma profesional y desarrollar nuevas habilidades creativas. La creación de páginas web y entusiasta para el seguimiento de la misma para poder fortalecer las habilidades necesarias para las creaciones digitales. Con las herramientas HTML, CSS, JavaScript.</p>
               </div>
             </div>
             <div className="col-lg-6">
@@ -83,10 +83,10 @@ export const SobreNosotros = () => {
             </div>
             <div className="row">
               <div className="col-lg-6">
-                <Button variant="light p-4 " href="https://wenaleja.github.io/bit07me/" className="btn_portafolio"><ion-icon name="briefcase-outline"></ion-icon>Portafolio</Button>
+                {/* <Button variant="light p-4 " href="https://wenaleja.github.io/bit07me/" className="btn_portafolio_wendy"><ion-icon name="briefcase-outline"></ion-icon>Portafolio</Button> */}
               </div>
               <div className="col-lg-6">
-                <Button variant="light p-4" href="https://github.com/wenaleja" className="btn_portafolio"><ion-icon name="person-add-outline"></ion-icon>GitHub</Button>
+                {/* <Button variant="light p-4" href="https://github.com/wenaleja" className="btn_portafolio_wendy"><ion-icon name="person-add-outline"></ion-icon>GitHub</Button> */}
               </div>
             </div>
           </div>
@@ -108,10 +108,10 @@ export const SobreNosotros = () => {
             </div>
             <div className="row">
               <div className="col-lg-6">
-                <Button variant="light p-4 " href="https://www.linkedin.com/in/eleiza-caridad/" className="btn_portafolio"><ion-icon name="briefcase-outline"></ion-icon>linkedin</Button>{' '}
+                {/* <Button variant="light p-4 " href="https://www.linkedin.com/in/eleiza-caridad/" className="btn_portafolio_eleiza"><ion-icon name="briefcase-outline"></ion-icon>linkedin</Button>{' '} */}
               </div>
               <div className="col-lg-6">
-                <Button variant="light p-4" href="https://github.com/eleizac" className="btn_portafolio"><ion-icon name="person-add-outline"></ion-icon>GitHub</Button>{' '}
+                {/* <Button variant="light p-4" href="https://github.com/eleizac" className="btn_portafolio_eleiza"><ion-icon name="person-add-outline"></ion-icon>GitHub</Button>{' '} */}
               </div>
             </div>
           </div>
@@ -120,6 +120,5 @@ export const SobreNosotros = () => {
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </Container>
-
   );
 };
