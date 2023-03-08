@@ -8,6 +8,7 @@ import "../styles/components/Login.scss";
 import chef from "../assets/document/chef.png";
 
 export const Login = () => {
+  
   return (
     <>
       <Header />
@@ -18,7 +19,7 @@ export const Login = () => {
             <Card.Body className="container_cardlogin">
               <Card.Title>
                 <h1 className="titulo1">
-                  Welcome to <span>SabrosApp</span>
+                  Welcome to <span>FoodiesApp</span>
                 </h1>
                 <h3 className="titulo2">
                   Please enter your credentials to log In.
@@ -30,13 +31,11 @@ export const Login = () => {
               <Form>
                 <Form.Group className="mb-3" controlId="formBasicRecope">
                   <Form.Label></Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
+                  <Form.Control type="email" placeholder="Username" />
                   <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Enter Password" />
+                  <Form.Control type="text" placeholder="Password" />
                   <br></br>
-                  <Button variant="outline-success" size="lg">
-                    LOGIN
-                  </Button>{" "}
+                  <Button variant="outline-success" size="lg">LOGIN</Button>{" "}
                 </Form.Group>
               </Form>
             </Card.Body>
@@ -47,4 +46,3 @@ export const Login = () => {
     </>
   );
 };
-

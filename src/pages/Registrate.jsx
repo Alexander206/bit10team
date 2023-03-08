@@ -8,6 +8,7 @@ import "../styles/components/Registrate.scss";
 import chef from "../assets/document/chef.png";
 
 export const Registrate = () => {
+  
   return (
     <>
       <Header />
@@ -20,7 +21,7 @@ export const Registrate = () => {
                 <h1 className="titulo3">Welcome</h1>
                 <br></br>
                 <h3 className="titulo4">
-                  Here you can register to be part of <span>SabrosApp</span>
+                  Here you can register to be part of <span>FoodiesApp</span>
                 </h3>
               </Card.Title>
               <figure>
@@ -32,7 +33,7 @@ export const Registrate = () => {
                   <Form.Control type="text" placeholder="Name" />
                   <br></br>
                   <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="LastName" />
+                  <Form.Control type="text" placeholder="Last Name" />
                   <br></br>
                   <Form.Label></Form.Label>
                   <Form.Control type="email" placeholder="E-mail" />
