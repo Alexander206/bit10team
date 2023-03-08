@@ -25,8 +25,8 @@ export const Header = () => {
         <Link className='sobre' to='/NewRecipe'>
         NewRecipe
         </Link>
-        <Link className='sobre' to='/indexprueba'>
-        index prueba
+        <Link className='sobre' to='/TableRecipes'>
+        Table Recipes
         </Link>
       </nav>
 

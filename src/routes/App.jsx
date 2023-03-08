@@ -5,7 +5,7 @@ import { SobreNosotros } from '../pages/SobreNosotros.jsx';
 import { NewRecipe } from '../pages/NewRecipe.jsx';
 import { Registrate } from '../pages/Registrate.jsx';
 import { Login } from '../pages/Login.jsx';
-import { IndexPrueba } from '../pages/IndexPrueba.jsx';
+import { TableRecipes } from '../pages/TableRecipes.jsx';
 import { NotFound } from '../pages/NotFound.jsx';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Route path='/' element={<Inicio />}></Route>
         <Route path='/SobreNosotros' element={<SobreNosotros />}></Route>
         <Route path='/NewRecipe' element={<NewRecipe />}></Route>
-        <Route path='/indexprueba' element={<IndexPrueba />}></Route>
+        <Route path='/TableRecipes' element={<TableRecipes />}></Route>
         <Route path='/Login' element={<Login />}></Route>
         <Route path='/Registrate' element={<Registrate />}></Route>
         <Route path='*' element={<NotFound />}></Route>
