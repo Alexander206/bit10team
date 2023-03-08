@@ -9,7 +9,7 @@ export const CrearReceta = () => {
   };
   return (
     <>
-    <div className="container">
+    <div className="container-create">
     <h2 className="title_new">New Recipe</h2>
       <form className="form" onSubmit={handleSubmit(onSubmit)}>
         <article>

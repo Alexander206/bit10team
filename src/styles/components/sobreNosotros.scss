@@ -1,28 +1,19 @@
-.container{
-  background-color: var(--oscuro);
-}
 .titulo_profesion{
-  color: var(--azul);
+  color: var(--claro);
   font-family: "caladea";
   display: flex;
   margin-top: 15rem;
   font-size: 2rem;
-  margin-left: 4rem;
 }
 
 .nombre_programador{
-<<<<<<< HEAD
-  color:var(--azulClaro);
-=======
   color: var(--azul);
->>>>>>> adriana
   font-family: "barlow";
   font-size: 5rem;
-  margin-left: 4rem;
 }
 .img_linea{
   margin-left: -2rem;
-  width: 110%;
+  width: 100%;
 }
 .button-style{
   width:50%
@@ -31,21 +22,20 @@
   color: var(--claro);
   font-family: "caladea";
   font-size: 1.6rem;
-  margin-left: 4rem;
 }
 
 .img_jeison{
   display: flex;
-  width: 60rem;
-  margin-left: -4rem;
+  width: 90%;
+  margin-left: 2rem;
   margin-top: 5rem;
 }
 
 .img_adriana{
   display: flex;
-  width: 60rem;
-  margin-left: -4rem;
-  margin-top: 9rem;
+  width: 90%;
+  margin-left: 2rem;
+  margin-top: 5rem;
 }
 
 .img_wendy{
@@ -68,7 +58,6 @@
   border-radius: 3rem;
   width: 100%; 
   font-size: 2rem;
-  margin-top: -20rem;
 }
 
 .btn_portafolio_adriana{
@@ -76,7 +65,7 @@
   border: none;
   border-radius: 3rem;
   width: 50rem; 
-  margin-top: -34rem;
+  margin-top: -233rem;
 }
 
 .btn_portafolio_wendy{
@@ -99,6 +88,9 @@
   margin-top: 2rem;
 }
 
+.ion-icon{
+  color: var(--azul);
+}
 // Responsive
 .contenedor_completo{
   background-color: var(--oscuro);
