@@ -1,0 +1,43 @@
+.fila_eliminar {
+    background-color: var(--verde);
+}
+
+.img_eliminar{
+    width: 50%;
+    border-radius: 3rem;
+    box-shadow: 0 0 10px 5px rgba(75, 76, 76, 0.5);
+    margin-left: 3rem;
+}
+
+.titulo_eliminar{
+    font-family: "barlow";
+    color: var(--claro);
+    font-size: 2rem;
+    margin-left: -7rem;
+}
+
+.form_control_eliminar{
+    font-family: "caladea";
+    margin-left: -6rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 1rem;
+}
+
+.btn_eliminar {
+    background-color: var(--rojo);
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin-top: 8rem;
+    margin-left: -44rem;
+    color: var(--claro);
+    width: 8rem;
+}
+
+.btn_eliminar:hover{
+    background: var(--rojo);
+    box-shadow: 0 0 10px var(--rojo), 0 0 10px var(--rojo), 0 0 10px var(--rojo);
+    transition: 0.2s;
+}

@@ -1,78 +1,84 @@
 .header {
-    background-color: var(--verde);
-    height: 5rem;
-    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-    .inicio {
-        font-size: 1.6rem;
-        padding: 1rem;
-        margin-left: 55rem;
-        text-decoration: none;
-        color: var(--claro);
+    background-color: var(--rojo);
+    width: 100vw;
+    font-family: "barlow";
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+
+    z-index: 10;
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 3rem;
+
+        .titulo_sabrossapp {
+
+            font-size: 2rem;
+            color: var(--claro);
+            margin: 0;
+            margin-left: 1rem;
+
+            span {
+                font-weight: bolder;
+                color: var(--oscuro);
+            }
+        }
+
+        .img-chef {
+            height: 6rem;
+        }
     }
 
-    .inicio:hover {
-        color: var(--rojo);
-        transition: 0.5s;
+    .navegacion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+            font-size: 1.6rem;
+            text-decoration: none;
+            color: var(--claro);
+            margin: 0 1rem;
+        }
+
+        a:hover {
+            color: var(--rojo);
+            transition: 0.5s;
+        }
     }
 
-    .sobre {
-        font-size: 1.6rem;
-        padding: 1rem;
-        text-decoration: none;
-        color: var(--claro);
+    .botones {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 3rem;
+
+        a {
+            color: var(--claro);
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: 0.2s;
+            border-radius: 1rem;
+            padding: 0.5rem 1rem;
+            margin: 1rem;
+
+            transition: 0.2s;
+        }
+
+        a:hover {
+            background: var(--rojo);
+            box-shadow: 0 0 0.5rem var(--rojo), 0 0 20px var(--rojo), 0 0 40px var(--rojo);
+            transition-delay: 0.2s;
+        }
     }
 
-    .sobre:hover {
-        color: var(--rojo);
-        transition: 0.5s;
-    }
-
-    .iniciar {
-        position: relative;
-        display: inline-block;
-        padding: 1rem;
-        padding-top: 1.4rem;
-        margin-left: 25rem;
-        color: var(--claro);
-        font-size: 1.8rem;
-        text-decoration: none;
-        transition: 0.2s;
-        border-radius: 1rem;
-    }
-
-    .iniciar:hover {
-        background: var(--rojo);
-        box-shadow: 0 0 10px var(--rojo), 0 0 20px var(--rojo), 0 0 40px var(--rojo);
-        transition-delay: 0.2s;
-    }
-
-    .registrar {
-        position: relative;
-        display: inline-block;
-        padding: 1rem;
-        padding-top: 1.4rem;
-        color: var(--claro);
-        font-size: 1.8rem;
-        text-decoration: none;
-        transition: 0.2s;
-        border-radius: 1rem;
-    }
-
-    .registrar:hover {
-        background: var(--rojo);
-        box-shadow: 0 0 10px var(--rojo), 0 0 20px var(--rojo), 0 0 40px var(--rojo);
-        transition-delay: 0.2s;
-    }
-
-    .img-chef {
-        height: 60px;
-        position: relative;
-        margin-right: 5rem;
-        margin-left: 5rem;
-        margin-top: -7rem;
-    }
 }
