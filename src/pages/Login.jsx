@@ -34,7 +34,7 @@ export const Login = () => {
                   <Form.Label></Form.Label>
                   <Form.Control type="text" placeholder="Enter Password" />
                   <br></br>
-                  <Button variant="success" className="button">
+                  <Button variant="outline-success" size="lg">
                     LOGIN
                   </Button>{" "}
                 </Form.Group>
@@ -47,3 +47,4 @@ export const Login = () => {
     </>
   );
 };
+

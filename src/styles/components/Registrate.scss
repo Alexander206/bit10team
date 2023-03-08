@@ -33,9 +33,6 @@ span {
   color: var(--rojo);
 }
 
-.Button {
-  color: black;
-}
 input[type="email"],
 input[type="text"] {
   font-size: 12px;
@@ -63,6 +60,6 @@ input[type="text"] {
     transition: all 0.3s ease-in-out;
   }
   &:hover {
-    background-color: #66cab9;
+    background-color: var(--rojo);
   }
 }

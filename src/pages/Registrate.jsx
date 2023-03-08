@@ -29,21 +29,21 @@ export const Registrate = () => {
               <Form>
                 <Form.Group className="mb-3" controlId="formBasicRecope">
                   <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Enter User Name" />
+                  <Form.Control type="text" placeholder="Name" />
                   <br></br>
                   <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Enter User LastName" />
+                  <Form.Control type="text" placeholder="LastName" />
                   <br></br>
                   <Form.Label></Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
+                  <Form.Control type="email" placeholder="E-mail" />
                   <br></br>
                   <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Enter Password" />
+                  <Form.Control type="text" placeholder="Password" />
                   <br></br>
                   <Form.Label></Form.Label>
                   <Form.Control type="text" placeholder="Confirm Password" />
                   <br></br>
-                  <Button variant="danger">REGISTER NOW</Button>{" "}
+                  <Button variant="outline-danger" size="lg">REGISTER NOW</Button>{" "}
                 </Form.Group>
               </Form>
             </Card.Body>
