@@ -9,7 +9,7 @@ export const Header = () => {
       <figure className='logo'>
         <img className='img-chef' src={logo} alt='chef' />
         <h1 className='titulo_sabrossapp'>
-          Sabros<span>App</span>
+          Foodies<span>App</span>
         </h1>
       </figure>
 
