@@ -1,5 +1,68 @@
-.container-card{
-  background-color: var(--verde);
+.container-card {
   width: 100%;
   padding: 1%;
+  width: 100%;
+  padding: 1%;
+  border: 2px solid var(--verde);
+  background-color: var(--verde);
+  padding: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+}
+.titulo3 .titulo4 {
+  color: var(--claro);
+  font-family: barlow;
+  font-size: 6rem;
+  text-align: center;
+}
+.titulo4 {
+  font-size: 2rem;
+}
+span {
+  color: var(--rojo);
+}
+
+.Button {
+  color: black;
+}
+input[type="email"],
+input[type="text"] {
+  font-size: 12px;
+  padding: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 5px #2980b9;
+  }
+
+  Estilos para el botón de inicio de sesión Button[type="submit"] {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  &:hover {
+    background-color: #66cab9;
+  }
 }
