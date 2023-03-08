@@ -7,7 +7,7 @@
 }
 
 .nombre_programador{
-  color: rgb(103, 104, 104);
+  color: var(--azul);
   font-family: "barlow";
   font-size: 5rem;
 }
@@ -19,7 +19,7 @@
   width:50%
 }
 .descripcion{
-  color: rgb(103, 104, 104);
+  color: var(--claro);
   font-family: "caladea";
   font-size: 1.6rem;
 }
@@ -93,11 +93,12 @@
 }
 // Responsive
 .contenedor_completo{
-  background-color: var(--azul);
+  background-color: var(--oscuro);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 .container_uno{
   display: flex;

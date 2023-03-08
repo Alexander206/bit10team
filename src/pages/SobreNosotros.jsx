@@ -48,7 +48,7 @@ export const SobreNosotros = () => {
                 <figure>
                   <img className='img_linea' src={linea} alt='linea' />
                 </figure>
-                <p className="descripcion" >Desarrolladora Web Frontend junior, con conocimientos técnicos en: HTML, CSS, Javascript y React. <br />Formación en Cloud computing, Azure, AWS, Analítica de datos, ISO 27001, Scrum y Lean six sigma. <br />Experiencia en análisis, planeación y documentación de pruebas manuales, asegurando parametros <br /> de calidad del software. </p>
+                <p className="descripcion" >Desarrolladora Web Frontend junior, con conocimientos técnicos en: HTML, CSS, Javascript y React. Formación en Cloud computing, Azure, AWS, Analítica de datos, ISO 27001, Scrum y Lean six sigma. Experiencia en análisis, planeación y documentación de pruebas manuales, asegurando parametros de calidad del software. </p>
               </div>
             </div>
             <div className="col-lg-6">
