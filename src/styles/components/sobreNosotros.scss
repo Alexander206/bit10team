@@ -11,7 +11,11 @@
 }
 
 .nombre_programador{
+<<<<<<< HEAD
   color:var(--azulClaro);
+=======
+  color: var(--azul);
+>>>>>>> adriana
   font-family: "barlow";
   font-size: 5rem;
   margin-left: 4rem;
@@ -97,11 +101,12 @@
 
 // Responsive
 .contenedor_completo{
-  background-color: var(--azul);
+  background-color: var(--oscuro);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 .container_uno{
   display: flex;
