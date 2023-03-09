@@ -11,7 +11,8 @@ import "../styles/components/sobreNosotros.scss";
 
 export const SobreNosotros = () => {
   return (
-    <Container className="contenedor_completo">
+    <body className="body_dos">
+      <Container className="contenedor_completo">
       <Header />
       <section className="container">
         <div className="container_uno">
@@ -233,5 +234,6 @@ export const SobreNosotros = () => {
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
       ></script>
     </Container>
+    </body>
   );
 };
