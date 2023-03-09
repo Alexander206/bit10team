@@ -46,8 +46,10 @@ export const TableRecipes = () => {
                     <td>{recipe.description}</td>
                     <td>
                       {" "}
-                      <Button className="button-table" variant="danger" onClick={() => handleDelete(recipe.id)}>Delete</Button>
                       <Button className="button-table" variant="primary" onClick={() => handleEdit(recipe)}>Edit</Button>
+                      <br />
+                      <br />
+                      <Button className="button-table" variant="danger" onClick={() => handleDelete(recipe.id)}>Delete</Button>
                     </td>
                   </tr>
                 ))}
