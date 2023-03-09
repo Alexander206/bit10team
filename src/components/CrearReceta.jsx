@@ -2,22 +2,35 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import "../styles/components/crearReceta.scss";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Modal from "react-bootstrap/Modal";
 
 export const CrearReceta = () => {
-  //ESTE DEBERÍA SER EL ARREGLO DE TODOS LOS RECIPES ACTUALES
-  //AÑADIR STATES PARA QUE SE SINCRONICE EL ARREGLO DE TODOS LOS ITEMS CON LOS NUEVOS GENERADOS
-  const [recipes, setRecipes] = useState([]);
+  //VARIABLES DEL MODAL
+  const [show, setShow] = useState(false);
+  //FORM
   const { register, handleSubmit } = useForm();
+  const navigateTo = useNavigate();
+  //TRAER ARREGLO DE RECETAS
+  const recipes = JSON.parse(localStorage.getItem("recipes"));
 
-  let id = 0;
+  const handleClose = () => {
+    setShow(false);
+    //REALIZAR REDIRECCIÓN A LA VISTA DE LA TABLA
+    navigateTo("/TableRecipes");
+  }
 
   const onSubmit = (data) => {
-    console.log(data);
-    id++;
-    data.id = id;
-    //AÑADIR NUEVO RECORD A LA LISTA DE RECIPES ACTUALES
+    //OBTENER ULTIMO ITEM PARA VER EL ID Y SUMARLE 1
+    const lastItem = recipes[recipes.length - 1];
+    data.id = lastItem.id + 1;
+    //AGREGAR NUEVO DATO AL ARREGLO
     recipes.push(data);
-    console.log(recipes);
+    //ASIGNAR NUEVO VALOR DEL ARREGLO
+    localStorage.setItem("recipes", JSON.stringify(recipes));
+    //MOSTRAR MODAL DE CONFIRMACIÓN DE CREACIÓN
+    setShow(true);
   };
 
   return (
@@ -30,7 +43,7 @@ export const CrearReceta = () => {
             <input
               className="input_recipe"
               type="text"
-              {...register("newrecipe", {
+              {...register("name", {
                 required: true,
               })}
             />
@@ -59,6 +72,19 @@ export const CrearReceta = () => {
             value="Add New Recipe"
           />
         </form>
+
+        {/* MODAL */}
+        <Modal show={show} onHide={handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Create Recipe</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>Record Added Successfully</Modal.Body>
+          <Modal.Footer>
+            <Button variant="danger" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </>
   );

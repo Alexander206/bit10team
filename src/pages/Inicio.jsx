@@ -156,7 +156,7 @@ export const Inicio = () => {
       <main className='main_inicio'>
         <section className='fondo_banner'>
           <figure>
-            <h1>SABROSAPP</h1>
+            <h1>FOODIES APP</h1>
           </figure>
           <FormFiltro
             ingredients={ingredients}
