@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Header } from "../components/Header.jsx";
 import linea from "../assets/img/linea.png";
-import fondo_jeison from "../assets/img/fondo_jeison.png";
+import fondo_jeisson from "../assets/img/fondo_jeisson.png";
 import fondo_adriana from "../assets/img/fondo_adriana.png";
 import fondo_wendy from "../assets/img/fondo_wendy.png";
 import fondo_eleiza from "../assets/img/fondo_eleiza.png";
@@ -37,7 +37,7 @@ export const SobreNosotros = () => {
             </div>
             <div className="col-lg-6">
               <figure>
-                <img className="img_jeison" src={fondo_jeison} alt="jeison" />
+                <img className="img_jeison" src={fondo_jeisson} alt="jeison" />
               </figure>
             </div>
             <div className="row">
