@@ -5,7 +5,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
-import { useState } from "react"
+import { useState } from "react";
 import "../styles/components/TableRecipes.scss";
 
 export const TableRecipes = () => {
@@ -45,11 +45,14 @@ export const TableRecipes = () => {
                     <td>{recipe.ingredients}</td>
                     <td>{recipe.description}</td>
                     <td>
-                      {" "}
-                      <Button className="button-table" variant="primary" onClick={() => handleEdit(recipe)}>Edit</Button>
+                      <Button className="button-table" variant="primary" onClick={() => handleEdit(recipe)}>
+                        Edit
+                      </Button>
                       <br />
                       <br />
-                      <Button className="button-table" variant="danger" onClick={() => handleDelete(recipe.id)}>Delete</Button>
+                      <Button className="button-table" variant="danger" onClick={() => handleDelete(recipe.id)}>
+                        Delete
+                      </Button>
                     </td>
                   </tr>
                 ))}

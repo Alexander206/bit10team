@@ -8,8 +8,7 @@ export const ModalReceta = ({ id, name, video, instruction, link, ciudad }) => {
 
   // Verifica si el enlace del video existe y asigna el valor de videoUrl
   if (video !== "") {
-    const expresionRegular =
-      /^(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([^&]+)(?:&|$)/;
+    const expresionRegular = /^(?:https?:\/\/)?(?:www\.)?youtube\.com\/watch\?v=([^&]+)(?:&|$)/;
     const coincidencia = video.match(expresionRegular);
     videoUrl = `https://www.youtube.com/embed/${coincidencia[1]}`;
   }
@@ -45,7 +44,14 @@ export const ModalReceta = ({ id, name, video, instruction, link, ciudad }) => {
           <main className="modal-body">
             <h2>{name}</h2>
 
-            {videoEmbed}
+            <iframe
+              className="video"
+              src={videoUrl}
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
 
             <div className="container_options">
               <div className="container_location">
@@ -57,9 +63,7 @@ export const ModalReceta = ({ id, name, video, instruction, link, ciudad }) => {
                 <button>Eliinar</button>
               </div>
             </div>
-
             <p>{instruction}</p>
-
             <p>
               Do you want to know more?
               <a href={link} target="_blank">
