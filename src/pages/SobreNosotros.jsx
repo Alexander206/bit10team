@@ -22,7 +22,7 @@ export const SobreNosotros = () => {
           description="Soy entusiasta por aprender y usar nuevas tecnologías del desarrollo web, me apasiona el diseño, la
                   programación y la creación de productos digitales. Al ser Licenciando en Diseño Técnológico, mis
                   habilidades docente han fortalecido la comunicación, la dirección de grupos y la adaptabilidad."
-          img={fondo_jeison}
+          img={fondo_jeisson}
           linkedin="https://alexander206.github.io/"
           github="https://github.com/Alexander206"
         />
