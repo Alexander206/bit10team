@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Header } from "../components/Header.jsx";
 import linea from "../assets/img/linea.png";
-import fondo_jeison from "../assets/img/fondo_jeison.png";
+import fondo_jeisson from "../assets/img/fondo_jeisson.png";
 import fondo_adriana from "../assets/img/fondo_adriana.png";
 import fondo_wendy from "../assets/img/fondo_wendy.png";
 import fondo_eleiza from "../assets/img/fondo_eleiza.png";
