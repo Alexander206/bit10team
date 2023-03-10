@@ -1,57 +1,106 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../components/Header.jsx";
 import { Footer } from "../components/Footer.jsx";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Card from "react-bootstrap/Card";
-import "../styles/components/Registrate.scss";
 import chef from "../assets/document/chef.png";
-
 export const Registrate = () => {
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [flag, setFlag] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (!name || !email || !password) {
+      setFlag(true);
+    } else {
+      setFlag(false);
+      localStorage.setItem("Email", JSON.stringify(email));
+      localStorage.setItem("Password", JSON.stringify(password));
+
+      console.log("Saved in Local Storage");
+      alert("Registration Succesful!");
+    }
+  }
+  function toggleShowPassword() {
+    setShowPassword(!showPassword);
+  }
+
+  function handleClick() {
+    setLogin(!Login);
+  }
+
   return (
-    <>
+    
+    
+    <div className= "contenedor1">
+
+      <form onSubmit={handleSubmit}>
       <Header />
-      <main>
-        <section>
-          <Card>
-            <Card.Header as="h5">Sign Up New User</Card.Header>
-            <Card.Body className="container-card">
-              <Card.Title>
-                <h1 className="titulo3">Welcome</h1>
-                <br></br>
-                <h3 className="titulo4">
+      
+        <span className="titulo"></span>
+        
+        <h3 className="titulo4">
                   Here you can register to be part of <span>FoodiesApp</span>
                 </h3>
-              </Card.Title>
-              <figure>
+                <figure>
                 <img className="img-responsive" src={chef} alt="chef" />
               </figure>
-              <Form>
-                <Form.Group className="mb-3" controlId="formBasicRecope">
-                  <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Name" />
-                  <br></br>
-                  <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Last Name" />
-                  <br></br>
-                  <Form.Label></Form.Label>
-                  <Form.Control type="email" placeholder="E-mail" />
-                  <br></br>
-                  <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Password" />
-                  <br></br>
-                  <Form.Label></Form.Label>
-                  <Form.Control type="text" placeholder="Confirm Password" />
-                  <br></br>
-                  <Button variant="outline-danger" size="lg">REGISTER NOW</Button>{" "}
-                </Form.Group>
-              </Form>
-            </Card.Body>
-          </Card>
-        </section>
-      </main>
-      <Footer />
-    </>
+                
+        <div className="form-group">
+          
+          <label></label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter full name"
+            onChange={(event) => setName(event.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label></label>
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter email"
+            onChange={(event) => setEmail(event.target.value)}
+          />
+        </div>
+        <div className="form-group">
+          <label></label>
+          <div className="input-group">
+          <input
+            type= {showPassword ? "text" : "password"}
+            className="form-control"
+            placeholder="Enter password"
+            onChange={(event) => setPassword(event.target.value)}
+          />
+          </div>
+        </div>
+        <div className="input-group-append">
+          
+        </div>
+        <br/>
+        <button type="submit" className="btn btn-success btn-lg btn-block"style={{ fontSize: "2rem" }}>
+          Register
+        </button>
+        <br/>
+
+
+        {flag && (
+          <Alert color="primary" variant="danger">
+            Please Fill Every Field
+          </Alert>
+        )}
+      
+      </form>
+      <br/>
+      <Footer/>
+      
+    </div>
+    
   );
 };

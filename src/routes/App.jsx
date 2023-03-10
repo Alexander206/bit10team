@@ -7,6 +7,8 @@ import { Registrate } from '../pages/Registrate.jsx';
 import { Login } from '../pages/Login.jsx';
 import { NotFound } from '../pages/NotFound.jsx';
 
+
+
 function App() {
   return (
     <BrowserRouter>
