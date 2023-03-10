@@ -7,6 +7,7 @@ import { Registrate } from "../pages/Registrate.jsx";
 import { Login } from "../pages/Login.jsx";
 import { TableRecipes } from "../pages/TableRecipes.jsx";
 import { NotFound } from "../pages/NotFound.jsx";
+import { EditarReceta } from "../components/EditarReceta.jsx";
 
 import initialRecipe from "../data/recipes.json";
 
@@ -20,12 +21,12 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Inicio />}></Route>
-        <Route path="/SobreNosotros" element={<SobreNosotros page={page} setpage={setpage} />}></Route>
-        <Route path="/NewRecipe" element={<NewRecipe page={page} setpage={setpage} />}></Route>
-        <Route path="/TableRecipes" element={<TableRecipes page={page} setpage={setpage} />}></Route>
-        <Route path="/Login" element={<Login page={page} setpage={setpage} />}></Route>
-        <Route path="/Registrate" element={<Registrate page={page} setpage={setpage} />}></Route>
-        <Route path="*" element={<NotFound page={page} setpage={setpage} />}></Route>
+        <Route path="/SobreNosotros" element={<SobreNosotros />}></Route>
+        <Route path="/NewRecipe" element={<NewRecipe />}></Route>
+        <Route path="/TableRecipes" element={<TableRecipes />}></Route>
+        <Route path="/Login" element={<Login />}></Route>
+        <Route path="/Registrate" element={<Registrate />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
   );

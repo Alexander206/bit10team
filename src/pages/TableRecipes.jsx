@@ -6,11 +6,20 @@ import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 import { useState } from "react";
+<<<<<<< HEAD
 import "../styles/pages/TableRecipes.scss";
+=======
+import "../styles/components/TableRecipes.scss";
+import { EditarReceta } from "../components/EditarReceta.jsx";
+import { useNavigate } from "react-router-dom";
+>>>>>>> adriana
 
 export const TableRecipes = () => {
   // Simulated Data RECIPES
-  const [recipes, setRecipes] = useState(JSON.parse(localStorage.getItem("recipes")));
+  const [recipes, setRecipes] = useState(
+    JSON.parse(localStorage.getItem("recipes"))
+  );
+  const navigateTo = useNavigate();
 
   const handleDelete = (id) => {
     // Eliminamos el elemento con el id dado
@@ -20,6 +29,10 @@ export const TableRecipes = () => {
     setRecipes(newRecipes);
     //ASIGNAR AL STORAGE EL NUEVO VALOR
     localStorage.setItem("recipes", JSON.stringify(newRecipes));
+  };
+  const handleEdit = (recipe) => {
+    // Lanzar Edit
+    navigateTo("/EditRecipe/" + recipe.id + "/edit");
   };
   return (
     <>
@@ -45,12 +58,29 @@ export const TableRecipes = () => {
                     <td>{recipe.ingredients}</td>
                     <td>{recipe.description}</td>
                     <td>
+<<<<<<< HEAD
                       <Button className="button-table" variant="primary" onClick={() => handleEdit(recipe)}>
+=======
+                      {" "}
+                      <Button
+                        className="button-table"
+                        variant="primary"
+                        onClick={() => handleEdit(recipe)}
+                      >
+>>>>>>> adriana
                         Edit
                       </Button>
                       <br />
                       <br />
+<<<<<<< HEAD
                       <Button className="button-table" variant="danger" onClick={() => handleDelete(recipe.id)}>
+=======
+                      <Button
+                        className="button-table"
+                        variant="danger"
+                        onClick={() => handleDelete(recipe.id)}
+                      >
+>>>>>>> adriana
                         Delete
                       </Button>
                     </td>
