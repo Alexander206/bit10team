@@ -7,6 +7,7 @@ import { Registrate } from "../pages/Registrate.jsx";
 import { Login } from "../pages/Login.jsx";
 import { TableRecipes } from "../pages/TableRecipes.jsx";
 import { NotFound } from "../pages/NotFound.jsx";
+import { EditarReceta } from "../components/EditarReceta.jsx";
 
 function App() {
   //INICIALIZAR RECIPES (1 RECIPIENTE)
@@ -55,6 +56,7 @@ function App() {
         <Route path="/" element={<Inicio />}></Route>
         <Route path="/SobreNosotros" element={<SobreNosotros />}></Route>
         <Route path="/NewRecipe" element={<NewRecipe />}></Route>
+        <Route path="/EditRecipe/:id/edit" element={<EditarReceta />}></Route>
         <Route path="/TableRecipes" element={<TableRecipes />}></Route>
         <Route path="/Login" element={<Login />}></Route>
         <Route path="/Registrate" element={<Registrate />}></Route>
