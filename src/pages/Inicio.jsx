@@ -3,6 +3,7 @@ import { Header } from "../components/Header.jsx";
 import { Footer } from "../components/Footer.jsx";
 import { Receta } from "../components/Receta.jsx";
 import { FormFiltro } from "../components/FormFiltro.jsx";
+import Loading__Page from "../components/Loading__Page.jsx";
 import imgCheft from "../assets/document/chef.png";
 import "../styles/pages/inicio.scss";
 

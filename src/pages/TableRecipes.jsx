@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 import Card from "react-bootstrap/Card";
 import Table from "react-bootstrap/Table";
 import { useState } from "react";
-import "../styles/components/TableRecipes.scss";
+import "../styles/pages/TableRecipes.scss";
 
 export const TableRecipes = () => {
   // Simulated Data RECIPES
