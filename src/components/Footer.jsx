@@ -70,7 +70,7 @@ export const Footer = () => {
             <img
               className='rounded-circle circle'
               alt='171x180'
-              src='https://media.licdn.com/dms/image/D4E03AQGpfbkQ0eO1OA/profile-displayphoto-shrink_400_400/0/1675216052678?e=1683158400&v=beta&t=lpzIH-WmTE4nxlcO8TNvXpgypQPkj9be8w1IFHSKTjA'></img>
+              src='https://lh3.googleusercontent.com/a/AGNmyxbfSc1F3e9C_d-Po77hxKL1cG__a3iyuTdzGbhxRQ=s317'></img>
             <div className='row'>
               <div className='col-md-12 text-center name'>Adriana Moreno</div>
             </div>

@@ -44,6 +44,12 @@ body {
     margin: 0;
   }
 }
+.body_dos{
+  background: url('../assets/img/fondo_tecno_power.jpg') !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
 
 body::-webkit-scrollbar {
   background-color: var(--oscuro);

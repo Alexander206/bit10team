@@ -1,42 +1,92 @@
-import React, { useState, useEffect } from 'react';
-import { Header } from '../components/Header.jsx';
-import { Footer } from '../components/Footer.jsx';
-import { Receta } from '../components/Receta.jsx';
-import { FormFiltro } from '../components/FormFiltro.jsx';
-import imgCheft from '../assets/document/chef.png';
-import '../styles/pages/inicio.scss';
+import React, { useState, useEffect } from "react";
+import { Header } from "../components/Header.jsx";
+import { Footer } from "../components/Footer.jsx";
+import { Receta } from "../components/Receta.jsx";
+import { FormFiltro } from "../components/FormFiltro.jsx";
+import Loading__Page from "../components/Loading__Page.jsx";
+import imgCheft from "../assets/document/chef.png";
+import "../styles/pages/inicio.scss";
 
 export const Inicio = () => {
-  const API = 'https://www.themealdb.com/api/json/v2/9973533/randomselection.php';
+  const API = "https://www.themealdb.com/api/json/v2/9973533/randomselection.php";
 
-  const btnCreate = (
-    <Receta
-      key='create_recipe'
-      id='create_recipe'
-      name='New recipe'
-      img='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHEkJyJjmf3mAb3ovVger1-iynxPG4Ke9e1Q&usqp=CAU'
-      category='New category'
-      ingredient={['Ingredient 1', 'Ingredient 2', 'Ingredient 3', 'Ingredient 4']}
-      instruction='I am a recipe and I should have a few simple steps that are easy to follow. Whether you are a beginner or an experienced cook, my instructions will guide you through the process of creating a delicious dish that you can enjoy with your friends and family.'
-      video=''
-      link=''
-      ciudad='Country'
-    />
-  );
-
+  // Data de la API
   const [data, setdata] = useState([]);
-  const [recetas, setrecetas] = useState(<h1>No hay data</h1>);
-  const [ingredients, setingredients] = useState();
+  // Ingredientes disponibles [Traidos de la API]
+  const [ingredients, setingredients] = useState([]);
+  // Filtros seleccionados
   const [filtrerIgredients, setfiltrerIgredients] = useState([]);
-  const [showFiltrers, setshowFiltrers] = useState([]);
+  // Data que se renderiza
+  const [recipes, setrRecipes] = useState([]);
+  // Lista de los filtros mostrados
+  const [showFiltrers, setShowFiltrers] = useState([]);
 
-  /* Modal */
-  const [show, setShow] = useState(false);
+  // Lista de recetas
+  let recetas = <h1>No hay data</h1>;
 
-  // Vigilante a cambios en la lista
+  // Llamado a la API y creación de
+  useEffect(() => {
+    (async () => {
+      // LLamado a la API
+      let res = await fetch(API);
+      let response = await res.json();
+
+      // Se guarda la data de la API en [data]
+      setdata(response.meals);
+
+      // Creando lista de ingredientes
+      let resIngredients = response.meals.map((item) => [
+        item.strIngredient1,
+        item.strIngredient2,
+        item.strIngredient3,
+        item.strIngredient4,
+        item.strIngredient5,
+        item.strIngredient6,
+        item.strIngredient7,
+        item.strIngredient8,
+        item.strIngredient9,
+        item.strIngredient10,
+        item.strIngredient11,
+        item.strIngredient12,
+        item.strIngredient13,
+        item.strIngredient14,
+        item.strIngredient15,
+        item.strIngredient16,
+        item.strIngredient18,
+        item.strIngredient19,
+        item.strIngredient20,
+      ]);
+
+      // Concatenando la lista de ingredientes
+      resIngredients = [].concat(...resIngredients);
+
+      // Eliminando items en blanco o nulos
+      resIngredients = resIngredients.filter((item) => {
+        if (item !== null) {
+          if (item.length > 0) {
+            return item;
+          }
+        }
+      });
+
+      // Eliminando ingredientes iguales
+      resIngredients = resIngredients.filter((item, index, array) => array.indexOf(item) === index);
+
+      // Organizando el array en orden alfabetico
+      resIngredients = resIngredients.sort((a, b) => a.localeCompare(b));
+
+      // Creando el elemento HTML para colocarlo dentro del buscador
+      resIngredients = resIngredients.map((item) => <option key={item} value={item} />);
+
+      // Guardandolo en el estado de los ingredientes
+      setingredients(resIngredients);
+    })();
+  }, []);
+
+  /* ---------- Renderiador de los productos --------------- */
+
   useEffect(() => {
     let arrayTemp = [];
-
     // Se crea un array de la data que coincide con el filtro
     if (filtrerIgredients.length > 0) {
       arrayTemp = data.filter((item) => {
@@ -51,97 +101,39 @@ export const Inicio = () => {
       arrayTemp = data;
     }
 
+    setrRecipes(arrayTemp);
+
     let filtrers = filtrerIgredients.map((item) => (
       <li key={item}>
         <button onClick={() => deleteFiltrer(item)}>{item}</button>
       </li>
     ));
 
-    setshowFiltrers(filtrers);
+    setShowFiltrers(filtrers);
+  }, [ingredients, filtrerIgredients]);
 
-    // Creando el componente de la receta
-    let listaRecetas = arrayTemp.map((item) => {
-      return (
-        <Receta
-          key={item.idMeal}
-          id={item.idMeal}
-          name={item.strMeal}
-          img={item.strMealThumb}
-          category={item.strCategory}
-          ingredient={[
-            item.strIngredient1,
-            item.strIngredient2,
-            item.strIngredient3,
-            item.strIngredient4,
-            item.strIngredient5,
-          ]}
-          instruction={item.strInstructions}
-          video={item.strYoutube}
-          link={item.strSource}
-          ciudad={item.strArea}
-        />
-      );
-    });
-
-    // Cuardando la receta en el estado de las recetas
-    setrecetas(listaRecetas);
-  }, [data, filtrerIgredients]);
-
-  // Cuando cargue windows
-  window.addEventListener('load', async () => {
-    // LLamado a la API
-    let res = await fetch(API);
-    let response = await res.json();
-
-    // Se guarda la data de la API en 'data'
-    setdata(response.meals);
-
-    // Creando lista de ingredientes
-    let resIngredients = response.meals.map((item) => [
-      item.strIngredient1,
-      item.strIngredient2,
-      item.strIngredient3,
-      item.strIngredient4,
-      item.strIngredient5,
-      item.strIngredient6,
-      item.strIngredient7,
-      item.strIngredient8,
-      item.strIngredient9,
-      item.strIngredient10,
-      item.strIngredient11,
-      item.strIngredient12,
-      item.strIngredient13,
-      item.strIngredient14,
-      item.strIngredient15,
-      item.strIngredient16,
-      item.strIngredient18,
-      item.strIngredient19,
-      item.strIngredient20,
-    ]);
-
-    // Concatenando la lista de ingredientes
-    resIngredients = [].concat(...resIngredients);
-
-    // Eliminando items en blanco o nulos
-    resIngredients = resIngredients.filter((item) => {
-      if (item !== null) {
-        if (item.length > 0) {
-          return item;
-        }
-      }
-    });
-
-    // Eliminando ingredientes iguales
-    resIngredients = resIngredients.filter((item, index, array) => array.indexOf(item) === index);
-
-    // Organizando el array en orden alfabetico
-    resIngredients = resIngredients.sort((a, b) => a.localeCompare(b));
-
-    // Creando el elemento HTML para colocarlo dentro del buscador
-    resIngredients = resIngredients.map((item) => <option key={item} value={item} />);
-
-    // Guardandolo en el estado de los ingredientes
-    setingredients(resIngredients);
+  // Creando el componente de la receta
+  recetas = recipes.map((item) => {
+    return (
+      <Receta
+        key={item.idMeal}
+        id={item.idMeal}
+        name={item.strMeal}
+        img={item.strMealThumb}
+        category={item.strCategory}
+        ingredient={[
+          item.strIngredient1,
+          item.strIngredient2,
+          item.strIngredient3,
+          item.strIngredient4,
+          item.strIngredient5,
+        ]}
+        instruction={item.strInstructions}
+        video={item.strYoutube}
+        link={item.strSource}
+        ciudad={item.strArea}
+      />
+    );
   });
 
   // Función para borrar el filtro
@@ -153,10 +145,10 @@ export const Inicio = () => {
   return (
     <>
       <Header />
-      <main className='main_inicio'>
-        <section className='fondo_banner'>
+      <main className="main_inicio">
+        <section className="fondo_banner">
           <figure>
-            <h1>SABROSAPP</h1>
+            <h1>FOODIES APP</h1>
           </figure>
           <FormFiltro
             ingredients={ingredients}
@@ -165,19 +157,19 @@ export const Inicio = () => {
           />
         </section>
 
-        <section className='categorias'>
+        <section className="categorias">
           <article>
             <figure>
               <figcaption>Ingredients</figcaption>
             </figure>
           </article>
 
-          <article className=''>
-            <ul className='ingredients'>{showFiltrers.length ? showFiltrers : <button>All recipes</button>}</ul>
+          <article className="">
+            <ul className="ingredients">{showFiltrers.length ? showFiltrers : <button>All recipes</button>}</ul>
           </article>
         </section>
 
-        <section className='recetas' id='recetas'>
+        <section className="recetas" id="recetas">
           {recetas}
         </section>
       </main>
