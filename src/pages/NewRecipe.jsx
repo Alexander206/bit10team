@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
-import "../styles/components/NewRecipe.scss";
+import "../styles/pages/NewRecipe.scss";
 import { CrearReceta } from "../components/CrearReceta.jsx";
 
 export const NewRecipe = () => {
@@ -13,7 +13,7 @@ export const NewRecipe = () => {
     <>
       <Header />
       <CrearReceta />
-      <Footer/>
+      <Footer />
     </>
   );
 };

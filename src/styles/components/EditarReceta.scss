@@ -1,5 +1,5 @@
-.container-create{
-    background-color: var(--rojo);
+.container-edit{
+    background-color: var(--verde);
     height: 30rem;
     margin-top:13rem;
 }
@@ -49,12 +49,12 @@
     margin-top: 2rem;
 }
 
-.input_description{
+.input_description-edit{
     border: none;
     border-radius: 1rem;
     margin-left: 3rem;
     padding: 0.5rem;
-    width: 40rem;
+    width: 90%;
 }
 
 .input_submit{
@@ -67,4 +67,3 @@
     margin-top: 2rem;
     margin-left: 35rem;
 }
-

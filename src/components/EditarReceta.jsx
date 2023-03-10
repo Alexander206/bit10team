@@ -1,32 +1,39 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import "../styles/components/crearReceta.scss";
+import "../styles/components/EditarReceta.scss";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from 'react-bootstrap/Button';
+import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { Header } from "../components/Header.jsx";
+import { Footer } from "../components/Footer.jsx";
+import { useParams } from "react-router-dom";
 
-export const CrearReceta = () => {
+export const EditarReceta = () => {
+  const { id } = useParams();
+  //Traer el ITEM DEL ID
+  const recipes = JSON.parse(localStorage.getItem("recipes"));
+  // Eliminamos el elemento con el id dado
+  const recipe = recipes.filter(function (item) {
+    return item.id === parseInt(id);
+  })[0];
   //VARIABLES DEL MODAL
   const [show, setShow] = useState(false);
   //FORM
   const { register, handleSubmit } = useForm();
   const navigateTo = useNavigate();
-  //TRAER ARREGLO DE RECETAS
-  const recipes = JSON.parse(localStorage.getItem("recipes"));
 
   const handleClose = () => {
     setShow(false);
     //REALIZAR REDIRECCIÓN A LA VISTA DE LA TABLA
     navigateTo("/TableRecipes");
-  }
+  };
 
   const onSubmit = (data) => {
-    //OBTENER ULTIMO ITEM PARA VER EL ID Y SUMARLE 1
-    const lastItem = recipes[recipes.length - 1];
-    data.id = lastItem.id + 1;
-    //AGREGAR NUEVO DATO AL ARREGLO
-    recipes.push(data);
+    data.id = parseInt(id);
+    //MODIFICAR DATOS
+    let foundIndex = recipes.findIndex((item) => item.id == parseInt(id));
+    recipes[foundIndex] = data;
     //ASIGNAR NUEVO VALOR DEL ARREGLO
     localStorage.setItem("recipes", JSON.stringify(recipes));
     //MOSTRAR MODAL DE CONFIRMACIÓN DE CREACIÓN
@@ -35,16 +42,18 @@ export const CrearReceta = () => {
 
   return (
     <>
-      <div className="container-create">
-        <h2 className="title_new">New Recipe</h2>
+      <Header />
+      <div className="container-edit">
+        <h2 className="title_new">Edit Recipe</h2>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
           <article>
-            <label className="title_recipe">New Recipe</label>
+            <label className="title_recipe">Recipe</label>
             <input
               className="input_recipe"
               type="text"
               {...register("name", {
                 required: true,
+                value: recipe.name
               })}
             />
             <br />
@@ -54,31 +63,29 @@ export const CrearReceta = () => {
               type="text"
               {...register("ingredients", {
                 required: true,
+                value: recipe.ingredients
               })}
             />
             <br />
             <label className="description">Description Recipe</label>
-            <input
-              className="input_description"
-              type="text"
+            <textarea
+              className="input_description-edit"
+              type="area"
               {...register("description", {
                 required: true,
+                value: recipe.description
               })}
             />
           </article>
-          <input
-            className="input_submit"
-            type="submit"
-            value="Add New Recipe"
-          />
+          <input className="input_submit" type="submit" value="Edit Recipe" />
         </form>
-
+        <Footer />
         {/* MODAL */}
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Create Recipe</Modal.Title>
+            <Modal.Title>Edit Recipe</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Record Added Successfully</Modal.Body>
+          <Modal.Body>Record Edited Successfully</Modal.Body>
           <Modal.Footer>
             <Button variant="danger" onClick={handleClose}>
               Close

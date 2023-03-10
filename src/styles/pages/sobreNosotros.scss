@@ -1,0 +1,202 @@
+.body_about {
+  width: 100%;
+
+  .header .navbar {
+    background-color: var(--verdeOscuro);
+
+    a:hover {
+      color: var(--azul);
+    }
+  }
+
+  .container_profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: calc(100vw - 4px);
+    background: url("../../assets/img/fondo_tecno_power.jpg");
+    padding-top: 6rem;
+
+    .target {
+      width: 90%;
+      max-width: 80rem;
+      background-color: var(--azul);
+      padding: 3rem;
+
+      .texto {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        text-align: center;
+
+        .titulo_profesion {
+          color: var(--claro);
+          font-family: "caladea";
+          font-size: 2.2rem;
+          margin: 0;
+          padding: 0;
+          order: 2;
+        }
+
+        .nombre_programador {
+          color: rgb(73, 73, 73);
+          font-family: "barlow";
+          font-size: 4rem;
+          margin-left: 4rem;
+          margin: 0;
+          padding: 0;
+          order: 1;
+        }
+
+        .separador {
+          width: 90%;
+          height: 4px;
+          background-color: var(--claro);
+          order: 3;
+        }
+
+        .descripcion {
+          color: rgb(73, 73, 73);
+          font-family: "caladea";
+          font-size: 1.6rem;
+          margin: 0;
+          padding: 0;
+          order: 4;
+        }
+      }
+
+      .imagen {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        figure {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          max-height: 80%;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #000;
+          text-decoration: none;
+          min-width: 15rem;
+          border-radius: 5rem;
+          box-shadow: 0 0 1rem rgb(166, 166, 166);
+          background-color: var(--claro);
+          padding: 2rem;
+
+          ion-icon {
+            size: large;
+            color: var(--azul);
+            font-size: 3rem;
+            margin-right: 1rem;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media (min-width: 800px) {
+  .body_about {
+    .container_profile {
+      .target {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .texto {
+          padding-bottom: 8rem;
+          width: 50%;
+
+          .titulo_profesion {
+            order: 0;
+          }
+
+          .nombre_programador {
+            order: 0;
+          }
+
+          .separador {
+            order: 0;
+          }
+
+          .descripcion {
+            order: 0;
+          }
+        }
+
+        .imagen {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+
+          figure {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-height: 80%;
+            overflow: hidden;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        .btns {
+          position: absolute;
+          bottom: 2rem;
+          left: -9rem;
+          width: 100%;
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            text-decoration: none;
+            min-width: 15rem;
+            border-radius: 5rem;
+            box-shadow: 0 0 1rem rgb(166, 166, 166);
+            background-color: var(--claro);
+            padding: 2rem;
+
+            ion-icon {
+              size: large;
+              color: var(--azul);
+              font-size: 3rem;
+              margin-right: 1rem;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
