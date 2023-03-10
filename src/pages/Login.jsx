@@ -10,6 +10,7 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginError, setLoginError] = useState(false);
+  const [redirect, setRedirect] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -20,11 +21,21 @@ export const Login = () => {
     if (email === storedEmail && password === JSON.parse(storedPassword)) {
       setLoginError(false);
       alert("Login successful!");
-      // Aquí podrías redirigir al usuario a otra página o hacer cualquier otra acción que desees
+
+      // Redirigir al usuario a otra página
+      setRedirect(true);
     } else {
       setLoginError(true);
     }
   }
+
+  // Si el usuario ha sido redirigido, redirigirlo a la página de inicio
+  if (redirect) {
+    return <Redirect to="/" />;
+  }
+      
+      // Aquí podrías redirigir al usuario a otra página o hacer cualquier otra acción que desees
+  
 
   return (
     <div className= "contenedor1">
