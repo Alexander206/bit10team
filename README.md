@@ -2,7 +2,7 @@
 
 ## Descripción:
 
-Todo en un mismo lugar! En esta aplicación encontrarás cientos de recetas que puedes preparar con los ingredientes que tienes en casa, olvídate de pensar por horas que preparar, explora sabores y crea maravillas con la creatividad de los miembros de la comunidad que suben sus mejores recetas. Únete a SabrosApp.
+Todo en un mismo lugar! En esta aplicación encontrarás cientos de recetas que puedes preparar con los ingredientes que tienes en casa, olvídate de pensar por horas que preparar, explora sabores y crea maravillas con la creatividad de los miembros de la comunidad que suben sus mejores recetas. Únete a FoodiesApp.
 
 *Participantes*
 
@@ -100,7 +100,7 @@ SanSerif : Morganite
 
 <hr/>
 
-## Guía de estilos SabrosApp
+## Guía de estilos FoodiesApp
 
 Colores
 ![image](./src/assets/document/colorSabrosApp.png)
@@ -111,7 +111,7 @@ SanSerif : futura medium bt
 <br/>
 SanSerif : Morganite
 
-## Wireframe de Baja SabrosApp
+## Wireframe de Baja FoodiesApp
 
 ![image](./src/assets/document/wireframe%20de%20baja%201.jpg)
 <br/>
@@ -123,7 +123,7 @@ SanSerif : Morganite
 
 <hr/>
 
-## Wireframe Alta SabrosApp
+## Wireframe Alta FoodiesApp
 
 ![image](./src/assets/document/tecno-power-01.png)
 <br/>
